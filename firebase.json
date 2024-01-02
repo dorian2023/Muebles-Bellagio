@@ -1,0 +1,13 @@
+{
+  "type": "service_account",
+  "project_id": "inventario-bellagio",
+  "private_key_id": "cb2b2cd5685e09358e4549361f6d573c01538420",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvwIBADANBgkqhkiG9w0BAQEFAASCBKkwggSlAgEAAoIBAQDe4kxMxbmdeCtp\nGVM53nlqJ8pkTI1wPwDGr1p3qJ4s29AuafKGsbYtMcPCqowz6iYjE1oKyPoyQXdH\nLLYV32uM07vQLgrObqPkbQVzXhQ/6nXWt8sJ5R6b21FXLFzOxfQ9j/AmuUl6Xrq4\nK3f6TJz6hlXogNm8wotwhGiuSGP8qxSEHhJQQuMd3COAj4MfRTZ3IsANcTEECh+R\nlVJVTKgpAIuq1t4WxGFXXWVyxAwWDmxNuB7j4bPkZf5BlNIE4cUcU2R3zh44Ade1\ndhNA3xQGIwY8GFvKFyp9nE+EdGqMkYrsjgmuXeCIRWGeLYRNyuAqyz53yvuM2+c4\n3WpTkkr5AgMBAAECggEAEa6JQrlC7EZUHKPeMY6VOkHgMWHOAgl1gc2ifdtaJRE7\n1vAfxeYY9O/oPwFxsE1TQOAa+hUPSD0KUz1YUAGSp4WaoOguLPSjuuOX6vBGkfrY\nkLQG/wjMC1hJqoKXSu4ds2PqYjVmf2Hpf+KEQ6P1UNNRwxQJx2BLA0j11wcLgPKu\n+4Y8Okc+W/s+ldeGKSqU2799DC/pVco6IPgvBVp389IZfQhz3qn+n/bApQf/5zit\nYNPFZanE7OscIcDgP2qpOaKxHXlwFf8cYaGyp4NO1TpLXMscrxtn9pAJtWhi74Ig\nzMJSfdd4ugydgPtA6TmhirIkghFoJQsruEzfVdwfwwKBgQD0rd0CMlO/ymusgz3P\nO6iwABz9jyBOx9OBiI3JckXwvFGEA2UM50H5H2WH4uA1CYhQg5RQuqcOz+lH8mOh\ngoHnLHoW1klUDEM6E+5grDbEJrueXqlJIBEVN+q3n3RW0rKcw/F4NuX7C0E8PNMd\nMS9JQs0pyu1+dHq+KAFv8Rox6wKBgQDpMkdYSrwJs9oJk7R94Z8qoHbhFBGzg6Og\npLkdSlI946h9lRTb/NuSgisxAfPUVHUkE/D2q9nevuRoApv2pcxIksA2RoGzfdLu\nxcYmpGprG6yKYpng+tHpSYjHDSqJZS1cS28I5SpqgWwxYa1LC/ijLNf8D90b4D15\nWdWrONkZqwKBgQDTzl3vNNnCwNuMrt+msSJJmQ9/f5KcH+c7zpXOuJlK1/pIqRek\nn9xAZ6lghElKIEJcUErnx2wuKlTq7yzH9020bJATjNRVaXgYooBMN0gBbPYlFhS9\nNIEVOR56bhIrxqDPi99QDVXwh8Gk/5JRRu6EIMuxTfVg7jwCuGbmHHRsmQKBgQCh\nI3MVWZ8R/Ut/LqecDJoVtIgxA9MvfplE2k5oJQErbvLwxGGDmfiIBpad6MF6SVog\nsf7iFOIZ/0KJdLQc/Xhp9a4IUzQwuZNWFyfTb+1xUdAqV/QI+IiwcXWoRjrMcjOk\nASQau3BR5FjEzsAWiZEoAEbHEJczOgKApkj1ZfTuvQKBgQCtq0AZvpRz/624wadD\nGelYR5hcD961GRiAopraoRNTyCR1gyuTOfDlDShTrAmBQYxZuYmJ8E67nkQzP9G5\nOGZmxzfdWPkQkiWmpDUDnkY1mCr1ENevJLDiThvr0VH1TFfTi3bmcs6LaL0sOup0\ne6W6d57C8izuIyerkBBBif//Uw==\n-----END PRIVATE KEY-----\n",
+  "client_email": "firebase-adminsdk-cj0yj@inventario-bellagio.iam.gserviceaccount.com",
+  "client_id": "104659261618393107838",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/firebase-adminsdk-cj0yj%40inventario-bellagio.iam.gserviceaccount.com",
+  "universe_domain": "googleapis.com"
+}
