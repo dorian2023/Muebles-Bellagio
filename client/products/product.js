@@ -34,10 +34,10 @@ document.addEventListener('DOMContentLoaded', () => {
                         `
                     const printProduct = `
                         <ul class="listProduct">
-                            <li>Title: ${products.id}</li>
-                            <li>Title: ${products.product.titulo}</li>
-                            <li>Descipcion: ${products.product.descripcion}</li>  
-                            <li>Descipcion: ${products.precio}</li  
+                            <li>ID: ${products.product.id}</li>
+                            <li>TTITULO: ${products.product.titulo}</li>
+                            <li>DESCRIPCION: ${products.product.descripcion}</li>  
+                            <li>PRECIO: ${products.precio}</li  
                             <img src="${products.product.Imagen}" />
                         </ul>
                         ${buttons()}
