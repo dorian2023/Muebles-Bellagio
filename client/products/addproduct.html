@@ -4,30 +4,23 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Muebles Bellagio - Agg nuevo producto</title>
-    <style>
-        .inputs{
-            display: flex;
-        }
-    </style>
 </head>
 <body>
     <div class="">
-        <div><h1>Agregar Nuevo Producto</h1></div>
-        <div class="inputs">
-            <div class="labelinput">
-                <label for="title">TITLE: </label>
-                <input type="text" name="title" id="title">
-            </div>
-            <div class="labelinput">
-                <label for="description">DESCRIPCION: </label>
-                <input type="text" name="description" id="description">
-            </div>
-            <div class="labelinput">
-                <label for="image">IMAGEN: </label>
-                <input type="file" name="image" id="image">
-            </div>
-            <button type="submit">Agregar Nuevo PRODUCTO</button>
-        </div>
+        <label for="">TITULO</label>
+        <input type="text" id="titulo">
+        
+        <label for="">DESCRIPCION</label>
+        <input type="text" id="descripcion">
+        
+        <label for="">PRECIO</label>
+        <input type="text" id="precio">
+        
+        <label for="">IMAGEN</label>
+        <input type="text" id="Imagen">
+
+        <button id="btnAdd">Agregar nuevo producto</button>
     </div>
+    <script src="./addProduct.js"></script>
 </body>
 </html>

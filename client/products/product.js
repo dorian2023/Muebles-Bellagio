@@ -34,10 +34,10 @@ document.addEventListener('DOMContentLoaded', () => {
                         `
                     const printProduct = `
                         <ul class="listProduct">
-                            <li>ID: ${products.product.id}</li>
+                            <li>ID: ${products.id}</li>
                             <li>TTITULO: ${products.product.titulo}</li>
                             <li>DESCRIPCION: ${products.product.descripcion}</li>  
-                            <li>PRECIO: ${products.precio}</li  
+                            <li>PRECIO: ${products.product.precio}</li>  
                             <img src="${products.product.Imagen}" />
                         </ul>
                         ${buttons()}
@@ -53,8 +53,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 btnAddProduct.addEventListener('click', () => {
-    window.location.href = "./addproduct.hmtl";
-})
+    window.location.href = "./addproduct.html";
+});
 
 
 
