@@ -1,3 +1,4 @@
+//Almacenamiento de la base de datos
 const db = require('./model');
 
 //Funcion de agregar un producto
@@ -48,7 +49,7 @@ async function updateProduct(id, change) {
 
 //Eliminar producto
 async function deleteProduct(id) {
-    productDeleted = await db.collection('products').doc(id).delete();
+    const productDeleted = await db.collection('products').doc(id).delete();
 
     return productDeleted
 }

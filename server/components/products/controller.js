@@ -41,7 +41,7 @@ function updateProduct(id, changeProduct) {
 }
 
 function deleteProduct(id) {
-    return new Promise(async(resolve, reject) => {
+    return new Promise(async (resolve, reject) => {
         if (!id) {
             console.log('deleteProduct: Error Data');
             reject('Data invalid in method delete')

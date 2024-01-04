@@ -10,7 +10,7 @@ router.get('/', (req, res) => {
         .catch((error) => response.error(req, res, 'Internal Error', 500, error));
     } else {
         controller.getProducts()
-        .then((productsList) => response.error(req, res, productsList, 200))
+        .then((productsList) => response.success(req, res, productsList, 200))
         .catch((error) => response.error(req, res, 'Internal Error', 500, error))
     }
 });
@@ -25,7 +25,7 @@ router.patch('/:id', (req, res) => {
     const id = req.params.id;
     const change = req.body;
     controller.updateProduct(id, change)
-        .then((changeProduct) => response.success(req, res, changeProduct, 200))
+        .then((changedProduct) => response.success(req, res, changedProduct, 200))
         .catch((error) => response.error(req, res, 'Internal Error', 500, error));
 });
 
