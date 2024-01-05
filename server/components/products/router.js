@@ -1,11 +1,12 @@
+
 const express = require('express');
 const router = express.Router();
 const controller = require('./controller');
 const response = require('../../response/index');
 
 router.get('/', (req, res) => {
-    if (req.body.title) {
-        controller.getOnlyProduct(req.body.title)
+    if (req.query.title) {
+        controller.getOnlyProduct(req.query.title)
         .then((productsList) => response.success(req, res, productsList, 200))
         .catch((error) => response.error(req, res, 'Internal Error', 500, error));
     } else {
