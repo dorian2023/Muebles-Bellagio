@@ -28,6 +28,17 @@ function getOnlyProduct(titleProduct) {
     })
 }
 
+function getOnlyProductByID(id) {
+    return new Promise((resolve, reject) => {
+        if (!id) {
+            console.log("[Product Controller]: Product does not have title for search, the title product is empty : [Controlador de producto]: El producto no tiene título para la búsqueda, el título del producto está vacío")
+            reject('There is no title product')
+        }
+
+        resolve(store.onlibyid(id))
+    })
+}
+
 function updateProduct(id, changeProduct) {
     return new Promise(async(resolve, reject) => {
         if (!id || !changeProduct) {
@@ -53,11 +64,11 @@ function deleteProduct(id) {
     });
 }
 
-
 module.exports = {
     addProduct,
     getProducts,
     getOnlyProduct,
+    getOnlyProductByID,
     updateProduct,
     deleteProduct,
 }

@@ -1,10 +1,9 @@
 const express = require('express');
 const routerApp = require('./router/index.js');
-const app = express();
 const cors = require('cors');
 
+const app = express();
 // app.use(express.urlencoded({ extended: true }))
-
 app.use(express.json());
 app.use(cors());
 
@@ -19,9 +18,8 @@ routerApp(app);
 app.listen(3100, () => {
     console.log('Servidor arrancando');
 })
-
-
 module.exports = app;
+
 
 
 

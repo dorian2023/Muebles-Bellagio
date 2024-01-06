@@ -39,6 +39,19 @@ async function getOnlyProduct(title) {
     })
 }
 
+//Funcion para obtener un solo producto por ID
+async function getOnlyProductByID(id) {
+    const productReference = db.collection('products').doc(`${id}`);
+    const snapshot = await productReference.get();
+
+    if (!snapshot.exists) {
+        console.error('No matching!! : ¡¡No hay similitudes!!');
+        return;
+    } 
+    
+    return snapshot.data();
+}
+
 //Actualizar producto
 async function updateProduct(id, change) {
     const product = db.collection('products').doc(id);
@@ -61,5 +74,6 @@ module.exports = {
     only: getOnlyProduct,
     update: updateProduct,
     delete: deleteProduct,
+    onlibyid: getOnlyProductByID,
 }
 // {}Ç||   []
