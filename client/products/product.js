@@ -27,7 +27,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 const listProducts = products.message.map(products =>{
 
                     function updateProduct() {
-                        return window.location.href = './updateproduct.html';ç
+                        return window.location.href = './updateproduct.html';
                     }
 
                     const buttons = () => `
@@ -40,7 +40,7 @@ document.addEventListener('DOMContentLoaded', () => {
                             <li>CATEGORIA: ${products.product.title}</li>
                             <li>DESCRIPCION: ${products.product.descripcion}</li>  
                             <li>PRECIO: ${products.product.precio}</li>  
-                            <img src="${products.product.Imagen}" />
+                            <img src="${products.product.image}" />
                         </ul>
                         ${buttons()}
                     </div>
@@ -123,7 +123,7 @@ btnSearch.addEventListener('click', () => {
                             <li>CATEGORIA: ${products.product.title}</li>
                             <li>DESCRIPCION: ${products.product.descripcion}</li>  
                             <li>PRECIO: ${products.product.precio}</li>  
-                            <img src="${products.product.Imagen}" />
+                            <img src="${products.product.imagen}" />
                         </ul>
                         ${buttons()}
                     </div>
