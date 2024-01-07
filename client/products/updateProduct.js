@@ -18,7 +18,7 @@ const getProductByID = async (id) => {
 }
 
 const updateAProduct = async (idProduct, changeProduct) => {
-    const productData = await fetch(`http://localhost:3100/products?id=${idProduct}`,{
+    const productData = await fetch(`http://localhost:3100/products/${idProduct}`,{
         method: 'PATCH',
         headers:{
             'Content-Type': 'application/json',
@@ -43,8 +43,6 @@ document.addEventListener('DOMContentLoaded', () => {
         .catch((error) => console.log(error));
 });
 
-
-
 btnUpdate.addEventListener('click', () => {
     const titleUpadte = titleProduct.value;
     const descriptionUpdate = descriptionProduct.value;
@@ -58,7 +56,7 @@ btnUpdate.addEventListener('click', () => {
         image: imageUpdate
     }
     updateAProduct(productID, changeProduct)
-        .then((response) => console.log(response))
+        .then(() => window.location.href = './index.hmtl')
         .catch((error) => console.error(error));
 });
 
