@@ -1,4 +1,4 @@
- const form = document.getElementById('myForm');
+const form = document.getElementById('myForm');
 const titleProduct = document.getElementById('titulo');
 const descriptionProduct = document.getElementById('descripcion');
 const priceProduct = document.getElementById('precio');

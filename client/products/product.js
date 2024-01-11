@@ -138,18 +138,6 @@ btnSearch.addEventListener('click', () => {
 });
 
 
-
-
-
-
-
-
-
-
-
-
-
-
 // //FUNCION PARA BOTON BUSCAR
 // const getOneProduct = async (titleProduct) => {    
 //     const oneProduct = await fetch(`http://localhost:3100/products?title=${titleProduct}`, {
