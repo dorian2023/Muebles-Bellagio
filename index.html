@@ -2,8 +2,9 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE-edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Inventario MB - Inicio de Sesion</title>
     <style>
         body{
             padding: 0;
@@ -37,16 +38,26 @@
     </style>
 </head>
 <body>
-    <h1>INICIO DE SESION</h1>
-    <div>
-        <form id="signup" class="form">
-            <label for="username">Nombre de usuario</label>
-            <input type="text" id="username" placeholder="Nombre de Usuario" name="username">
-            <label for="password">Clave</label>
-            <input type="password" id="password" placeholder="Clave" name="password">
-    
-            <button id="btnIniciarSesion">Iniciar Sesion</button>
-            <button id="btnRegistar">Registrar</button>
+    <div class="formulario">
+        <h1>INICIO DE SESION</h1>
+        <form id="signup" class="form" method="post">
+            <div class="username">
+                <input type="text" id="username" placeholder="Nombre de Usuario" name="username">
+                <label for="username">Nombre de usuario</label>
+            </div>
+            <div class="password">
+                <input type="password" id="password" placeholder="******"  name="password" required>
+                <label for="password">Contraseña</label>
+            </div>
+            <div class="recordar">
+                Olvidaste la contraseña?
+            </div>
+            <div class="btnIniReg">
+                <button id="btnIniciarSesion" type="submit">Iniciar Sesion</button>
+                <div class="registrarse">
+                    No te has registrado toca <a href="./client/register/index.html">AQUI</a>
+                </div>
+            </div>
         </form>
     </div>
     <div id="myModal" class="modal">
