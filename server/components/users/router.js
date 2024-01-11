@@ -17,6 +17,7 @@ router.get('/', (req, res) => {
     }
 });
 
+
 router.post('/', (req, res) => {
     controller.addUser(req.body)
      .then((user) => response.success(req, res, user, 200))

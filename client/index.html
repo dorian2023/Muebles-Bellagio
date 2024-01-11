@@ -37,22 +37,18 @@
     </style>
 </head>
 <body>
-    <form id="signup" class="form">
-        <label for="username">Nombre de usuario</label>
-        <input type="text" id="username" placeholder="Nombre de Usuario" name="username">
-
-        <label for="fullname">Nombre completo</label>
-        <input type="text" id="fullname" placeholder="Nombre Completo" name="fullname">
-
-        <label for="email">Correo Electronico</label>
-        <input type="email" id="email" placeholder="email@gmail.com" name="email">
-
-        <label for="password">Clave</label>
-        <input type="password" id="password" placeholder="Clave" name="password">
-
-        <button>Registrar</button>
-    </form>
-
+    <h1>INICIO DE SESION</h1>
+    <div>
+        <form id="signup" class="form">
+            <label for="username">Nombre de usuario</label>
+            <input type="text" id="username" placeholder="Nombre de Usuario" name="username">
+            <label for="password">Clave</label>
+            <input type="password" id="password" placeholder="Clave" name="password">
+    
+            <button id="btnIniciarSesion">Iniciar Sesion</button>
+            <button id="btnRegistar">Registrar</button>
+        </form>
+    </div>
     <div id="myModal" class="modal">
         <div class="modal-content">
           <span class="close">×</span>
@@ -60,6 +56,12 @@
         </div>
       </div>
       
-    <script src="./index.js"></script>
+    <script>
+        document.getElementById('btnRegistar').addEventListener('click', function(event) {
+            event.preventDefault(); // Evita que el formulario se envíe
+            window.location.href = 'http://localhost:5500/client/register/index.html';
+        });
+    </script>
+    
 </body>
 </html>
