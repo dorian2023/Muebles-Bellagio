@@ -4,8 +4,7 @@ const controller = require('./controller');
 const response = require('../../response/index');
 
 
-router.get('/', (req, res) => {
-    
+router.get('/', (req, res) => {    
     if (req.query.email) {
         controller.getUsers(req.query.email)
         .   then((user) => response.success(req, res, user, 200))
@@ -17,7 +16,6 @@ router.get('/', (req, res) => {
     }
 });
 
-
 router.post('/', (req, res) => {
     controller.addUser(req.body)
      .then((user) => response.success(req, res, user, 200))
@@ -26,8 +24,12 @@ router.post('/', (req, res) => {
      .catch((error) => response.error(req, res, 'Error Interno', 500, error))
 });
 
-// router.get('/', (req, res) => {
-// });
- 
+// Nueva ruta para el inicio de sesión
+router.post('/login', (req, res) => {
+    controller.login(req.body)
+        .then((result) => response.success(req, res, result, 200))
+        .catch((error) => response.error(req, res, 'Error Interno', 500, error));
+});
+
 module.exports = router;
 // {}||   [] <>

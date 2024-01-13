@@ -1,8 +1,7 @@
 const {
     auth,
-    db
+    db,
 } = require('./model');
-
 
 
 function addUser(userData) {
@@ -26,7 +25,7 @@ function getUsers(email) {
 module.exports = {
     add: addUser,
     save: saveUserInFirestore,
-    list: getUsers
+    list: getUsers,
 }
 
 // {}

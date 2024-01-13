@@ -1,6 +1,43 @@
 const { UserRecord } = require('firebase-admin/auth');
 const store = require('./store');
 
+/*const { compare } = require('bcrypt'); // Necesitarás bcrypt para comparar contraseñas
+
+function login(credentials) {
+    return new Promise(async (resolve, reject) => {
+        try {
+            const { email, password } = credentials;
+
+            // Obtener el usuario por correo electrónico desde tu sistema de almacenamiento (Firebase)
+            const user = await store.getUsers(email);
+
+            if (!user) {
+                // El usuario no existe
+                reject({ success: false, message: 'Credenciales incorrectas' });
+                return;
+            }
+
+            // Comparar la contraseña proporcionada con la contraseña almacenada
+            const passwordMatch = await compare(password, user.password);
+
+            if (passwordMatch) {
+                // Contraseña válida, inicio de sesión exitoso
+                resolve({ success: true, message: 'Inicio de sesión exitoso' });
+            } else {
+                // Contraseña incorrecta
+                reject({ success: false, message: 'Credenciales incorrectas' });
+            }
+        } catch (error) {
+            // Manejar errores, por ejemplo, problemas con la base de datos
+            console.error('Error en la autenticación:', error);
+            reject({ success: false, message: 'Error interno del servidor' });
+        }
+    });
+}*/
+
+
+
+
 function addUser(userData) {
     return new Promise((resolve, reject) => {
         if (Object.entries(userData).length === 0) {
@@ -42,6 +79,7 @@ module.exports = {
     addUser,
     getUsers,
     saveUser
+
 }
 
 // {}||   [] <>
