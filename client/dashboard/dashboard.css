@@ -1,0 +1,174 @@
+body{
+    background: #f1f1f1;
+    margin: 0;
+}
+.barra{
+    background: #000000;
+    color: #f1f1f1;
+    padding-bottom: 15px;
+    padding-top: 15px;
+    margin: 0;
+}
+.dropdown-menu{
+    margin: 17px;
+    background: #262a34;
+    color: #f1f1f1;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.568);
+}
+.menuperfil{
+    color: white;
+}
+.menuperfil:focus{
+    background: #23ae6b;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.568);
+
+}
+.cerrar:hover{
+    background-color: red;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.568);
+
+}
+.user{
+    font-size: 35px;
+}
+
+#catalogo-Menu{
+    background: #262a34;
+    color: #f1f1f1;
+}  
+.estructura{
+    display: flex;
+    flex-direction: row;
+}
+
+
+.barra-lateral{
+    background: #252121;
+    color: #fff;
+    min-width: 250px;
+    min-height: 100vh;
+    padding: 0;
+}
+.barra-lateral a {
+    text-decoration: none;
+    color: #fff;
+
+}
+
+
+
+/* ESTILOS DEL MENU */
+
+
+/* // {} ||   []  <> */
+
+.barra-lateral .menu a {
+    display: block;
+    padding: 20px;
+    font-family: Roboto, sans-serif;
+    font-weight: 500;
+    border-bottom: 1px solid rgba(255, 255, 255, .1);
+}
+.barra-lateral .menu a:hover {
+    background-color: #003c5d;
+    text-decoration: none;
+}
+.barra-lateral .menu {
+    border-top: 2px solid #fff;
+}
+.barra-lateral .menu a i{
+    margin-right: 20px;
+}
+.barra-lateral #catalogo-Menu {
+    margin-left: 250px;
+    margin-bottom: 50px;
+}
+
+/* MAIN */
+.main{
+    margin-top: 40px;
+}
+.main .columna{
+    padding-left: 40px;
+    padding-right: 40px;
+}
+
+/* MEDIAQUERYS */
+ 
+@media screen and (max-width:1300px){
+    .barra-lateral{
+        min-width: auto;
+        
+    }
+    .barra-lateral .menu a span{
+        display: none;
+    }
+    .barra-lateral .menu a i{
+        margin: 0;
+    }
+    .barra{
+        min-width: auto;
+    }
+    .dropdown-menu{
+        margin: 20px -79px 0px;
+    }
+}
+
+@media screen and (max-width:575px){
+    .estructura {
+        display: flex;
+        
+        flex-wrap: wrap;
+    }
+    .barra-lateral{
+        height: auto;
+        min-height: auto;
+    }
+    .barra-lateral .menu a {
+        display: inline-block;
+        border-bottom: none;
+    }
+    .dropdown-menu{
+        margin: 20px -78px 0px;
+    }
+    body{
+        font-size: 16px;
+        overflow: hidden;
+    }
+   
+}
+
+.productList {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(100px, 250px));
+    gap: 30px;
+    justify-content: space-around;
+    justify-items: center;
+    align-items: center;
+    align-content: space-around;
+
+}
+.productContainer{
+    width: 100%;
+    border: 1px solid black;
+    
+} 
+img{
+    width: 100px;
+    height: 100px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

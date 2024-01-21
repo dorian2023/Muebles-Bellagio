@@ -12,7 +12,7 @@
             margin: 0;
             font-family: sans-serif;
             height: 100vh;
-            background-image: url('./client/img/fondologin.jpg'); /* Reemplaza con la ruta correcta de tu imagen */
+            background-image: url('../img/fondologin.jpg'); /* Reemplaza con la ruta correcta de tu imagen */
             background-size: cover; /* Ajusta el tamaño de la imagen para cubrir completamente el fondo */
             background-position: center; /* Ajusta la posición de la imagen al centro */
             background-repeat: no-repeat; /* Evita que la imagen se repita */
@@ -186,8 +186,8 @@
             </div>
             <div class="btnIniReg">
                 <button id="btnIniciarSesion" type="submit">Iniciar Sesion</button>
-                <div class="registrarse">
-                    No te has registrado toca <a href="/register/index.html">AQUI</a>
+                <div class="registrarse" id="registrarse">
+                    No te has registrado toca <a href="/client/register/index.html">AQUI</a>
                 </div>
             </div>
         </form>
@@ -216,9 +216,11 @@
                     body: JSON.stringify({ email, password }),
                 });
     
+
+
                 if (response.ok) {
                     // Redirigir al usuario a la página de productos después de iniciar sesión
-                    window.location.href = '/client/products/index.html';
+                    return window.location.href = '../dashboard/dashboard.html';
                 } else {
                     // Manejar errores de autenticación
                     console.error('Error de autenticación:', response.statusText);

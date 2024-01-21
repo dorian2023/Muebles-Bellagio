@@ -35,9 +35,6 @@ function login(credentials) {
     });
 }*/
 
-
-
-
 function addUser(userData) {
     return new Promise((resolve, reject) => {
         if (Object.entries(userData).length === 0) {
@@ -49,7 +46,7 @@ function addUser(userData) {
             .catch((error) => console.log("[UsersController]: Error al crear nuevo Usuario: " + error));
             resolve(userData);
     });
-};
+}
 
 //Save in Firestore 
 function saveUser(user) {

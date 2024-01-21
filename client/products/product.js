@@ -42,13 +42,13 @@ document.addEventListener('DOMContentLoaded', () => {
                             <li>PRECIO: ${products.product.precio}</li>  
                             <img src="${products.product.image}" />
                         </ul>
-                        ${buttons()}
-                    </div>
-                    `;
-                    return printProduct;
-
-                });
-                productList.innerHTML = listProducts.join("");
+                        </div>
+                        `;
+                        return printProduct;
+                        // ${buttons()}----> este va abajo del ul para q salgan los botonos en el cuadro de los productos
+                        
+                    });
+                    productList.innerHTML = listProducts.join("");
             }
         })
         .catch((error) => console.error(error));

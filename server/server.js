@@ -12,38 +12,12 @@ app.use(cors());
 app.use(express.static(path.join(__dirname,'client')))
 
 
-
-
-/* app.post('/login', async (req, res) => {
-    // Lógica de autenticación aquí (usa tu función login del controlador)
-    // Devuelve una respuesta JSON con el resultado
-    try {
-        const credentials = {
-            email: req.body.email, // Asegúrate de que el nombre del campo coincida con tu formulario
-            password: req.body.password, // Asegúrate de que el nombre del campo coincida con tu formulario
-        };
-
-        // Lógica de autenticación utilizando la función login del controlador
-        const result = await controller.login(credentials);
-
-        // Verificar el resultado del inicio de sesión
-        if (result.success) {
-            // Inicio de sesión exitoso
-            res.json({ success: true, message: 'Inicio de sesión exitoso' });
-        } else {
-            // Credenciales incorrectas u otro error
-            res.json({ success: false, message: 'Credenciales incorrectas' });
-        }
-    } catch (error) {
-        // Manejo de errores
-        console.error('Error en el inicio de sesión:', error);
-        res.status(500).json({ success: false, message: 'Error interno del servidor' });
-    } 
-});*/
-
-
 app.get('/', (req, res) => {
-    res.sendFile(path.join(__dirname, 'index.html'));
+    // Construye la ruta absoluta al archivo login.html en la carpeta client/login
+    res.sendFile(path.join(__dirname, '..', 'client', 'login', 'login.html'));
+});
+app.get('/client/register', (req, res) => {
+    res.sendFile(path.join(__dirname, '..', 'client', 'register', 'index.html'));
 });
 
 app.post('/login', async (req, res) => {
