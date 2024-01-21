@@ -1,41 +1,141 @@
 <!DOCTYPE html>
 <html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Inventario Dashboard</title>
+  <link rel="stylesheet" href="../dashboard/dashboard.css">
+  <link rel="stylesheet" href="index.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+</head>
+
+<body>
+  <!-- HEADER -->
+  <div class="container-fluid">
+    <div class="row justify-content-center align-content-center">
+      <div class="col-3 barra">
+        <img src="../img/formLogo.jpg" alt="logo" class="logo">
+      </div>
+      <div class="col-6 barra">
+        <p class="titulo-nav">MUEBLES BELLAGIO - INVENTARIO</p>
+      </div>
+      <div class="col-3 text-end barra">
+        <ul class="navbar-nav mr-auto">
+          <li>
+            <div class="dropdown">
+              <a class="btn dropdown-toggle" href="#" id="navbar-Dropdown" role="button" data-bs-toggle="dropdown"
+                aria-expanded="false" aria-haspopup="true">
+                <i class="fas fa-user-circle"></i>
+              </a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item menuperfil cerrar" href="../login/login.html"><i
+                      class="fas fa-sign-out-alt m-1"></i>Salir</a>
+                </li>
+
+              </ul>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <!--MENU LATERAL Y CONTENIDO-->
+  <div class="">
+    <div class="estructura">
+      <!-- MENU LATERAL -->
+      <div class="barra-lateral col-12 col-sm-auto">
+        <nav class="menu d-flex d-sm-block justify-content-center flex-wrap">
+          <a href="../dashboard/dashboard.html"><i class="fas fa-home"></i><span>Inicio</span></a>
+          <a href="#"><i class="fas fa-couch"></i><span>Productos Disponibles</span></a>
+          <a href="#"><i class="fas fa-warehouse"></i><span>Inventario</span></a>
+
+          <a href="#" class="dropdown-toggle" id="catalogo-Dropdown" role="button" data-bs-toggle="dropdown"
+            aria-expanded="false">
+            <i class="fas fa-file-image"></i><span>Catálogo</span>
+          </a>
+          <ul class="dropdown-menu" id="catalogo-Menu">
+            <li><a class="dropdown-item" href="#">JUEGO DE RECIBO</a></li>
+            <li><a class="dropdown-item" href="#">COMEDORES</a></li>
+            <li><a class="dropdown-item" href="#">DORMITORIOS</a></li>
+            <li><a class="dropdown-item" href="#">OTROS</a></li>
+          </ul>
+        </nav>
+      </div>
+      <!-- CONTENIDO -->
+      <main class="main">
+        <div class="">
+          <p class="tituloDisponibles">Productos Disponibles</p>
+          <div class="prdouctosDisponible">
+            <div id="loader"></div>
+            <div class="aggYbuscaProductos">
+              <button type="button" class="btnAgg" id="btnAddProduct"><span>Agregar Producto</span></button>
+              <input type="text" id="inputSearch">
+              <button type="button" class="btnAgg" id="btnSearch"><span>Buscar</span></button>
+            </div>
+            <div class="tarjetasProductos">
+              <div class="productList" id="productList"></div>
+              <div class="" id="product"></div>
+            </div>
+          </div>
+        </div>
+        <script type="module" src="./product.js"></script>
+
+    </div>
+  </div>
+
+  <!-- SCRIPTS -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script type="module" src="../products/product.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+    integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
+    integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
+    crossorigin="anonymous"></script>
+  <script src="https://kit.fontawesome.com/646c794df3.js" crossorigin="anonymous"></script>
+  <!-- SCRIPTS PERSONALES -->
+  <script src="/dashboard.js"></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      var dropdownToggle = document.querySelector('.dropdown-toggle');
+      var dropdownMenu = document.querySelector('.dropdown-menu');
+
+      dropdownToggle.addEventListener('click', function () {
+        dropdownMenu.classList.toggle('show');
+      });
+    });
+
+    //FUNCION PARA EXTENDER EL SUB-MENU EN CATALOGO
+    document.addEventListener("DOMContentLoaded", function () {
+      var catalogoToggle = document.getElementById('catalogo-Dropdown');
+      var catalogoMenu = document.getElementById('catalogo-Menu');
+
+      catalogoToggle.addEventListener('click', function () {
+        catalogoMenu.classList.toggle('show');
+      });
+    });
+  </script>
+</body>
+
+</html>
+
+
+
+
+
+<!-- <!DOCTYPE html>
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Muebles Bellagio</title>
     <style>
-        body {
-            font-family: Arial, sans-serif;
-        }
-        img{
-            width: 100px;
-            height: 100px;
-        }
-        .header{
-            display: flex;
-            justify-content: space-between;
-        } 
-        .logo {
-            width: 60px;
-            height: 60px;  
-            border-radius: 50%;
-        } 
-        .productList {
-            display: grid;
-            grid-template-columns: repeat(3, minmax(100px, 250px));
-            gap: 30px;
-            justify-content: space-around;
-            justify-items: center;
-            align-items: center;
-            align-content: space-around;
- 
-        }
-        .productContainer{
-            width: 100%;
-            border: 1px solid black;
-            
-        } 
     </style>
 </head>
 <header class="header">
@@ -63,4 +163,4 @@
     </div>
     <script type="module" src="./product.js"></script>
 </body>
-</html>
+</html> -->

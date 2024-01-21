@@ -1,0 +1,50 @@
+.tituloDisponibles{
+    color: rgb(6, 6, 6);
+    width: 100%;
+    margin: 0;
+    padding:10px;
+    font-size: x-large;
+    text-shadow: 1px 0 5px rgba(255, 166, 0, 0.834);
+    text-align: center;
+    border-bottom: 3px solid black;
+    box-shadow:1px 0 1px rgba(255, 166, 0, 0.834);
+    margin-bottom: 10px;
+    font-weight: bold;
+
+    animation: teclear 3s steps(16);
+}
+@keyframes teclear {
+    from {
+        clip-path: polygon(0 0, 0 0, 0 100%, 0 100%)
+    }
+    to {
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%)
+    }
+}
+.aggYbuscaProductos{
+    display: flex;
+}
+.btnAgg{
+    border: 0;
+    background-image: linear-gradient(150deg, #3f3f00dc, rgba(49, 35, 4, 0.516), rgba(94, 62, 2, 0.834));
+    border-radius: 8px;
+    color: #fff;
+    display: flex;
+    font-size: 18px;
+    padding: 4px;
+    cursor: pointer;
+    transition: .3s;
+}
+.btnAgg:hover{
+ 
+    background-image: linear-gradient(150deg, #3f3f004b, rgba(49, 35, 4, 0.312), rgba(94, 62, 2, 0.279));
+   
+}
+.btnAgg span{
+    background-color: rgba(64, 43, 3, 0.834);
+    padding: 3px 14px;
+    border-radius: 6px;
+}
+.btnAgg:active{
+    transform: scale(0.9);
+}
