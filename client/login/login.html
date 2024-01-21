@@ -215,9 +215,6 @@
                     },
                     body: JSON.stringify({ email, password }),
                 });
-    
-
-
                 if (response.ok) {
                     // Redirigir al usuario a la página de productos después de iniciar sesión
                     return window.location.href = '../dashboard/dashboard.html';

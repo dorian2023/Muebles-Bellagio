@@ -15,6 +15,12 @@ body{
     color: #f1f1f1;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.568);
 }
+.btn:hover{
+    
+    background-color: rgba(255, 165, 0, 0.5);
+
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.568);
+}
 .menuperfil{
     color: white;
 }
@@ -57,10 +63,12 @@ body{
 
 
 
+
+
 /* ESTILOS DEL MENU */
 
 
-/* // {} ||   []  <> */
+
 
 .barra-lateral .menu a {
     display: block;
@@ -70,7 +78,7 @@ body{
     border-bottom: 1px solid rgba(255, 255, 255, .1);
 }
 .barra-lateral .menu a:hover {
-    background-color: #003c5d;
+    background-color: rgba(255, 165, 0, 0.5);
     text-decoration: none;
 }
 .barra-lateral .menu {
@@ -86,7 +94,46 @@ body{
 
 /* MAIN */
 .main{
-    margin-top: 40px;
+    width: 100%;
+    background-image: url('../img/fondologin.jpg'); /* Reemplaza con la ruta correcta de tu imagen */
+    background-size: cover; /* Ajusta el tamaño de la imagen para cubrir completamente el fondo */
+    background-position: center; /* Ajusta la posición de la imagen al centro */
+    background-repeat: no-repeat; /* Evita que la imagen se repita */
+}
+.divCharts{
+    border: 1px solid transparent;
+    box-shadow: 10px 0 20px rgba(255, 165, 0, 0.5);
+}
+.graficos {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    height: 315px;
+    padding: 3px;
+}
+
+.graficos div canvas{
+    border: 1px solid transparent;
+    box-shadow: 10px 0 20px rgba(255, 165, 0, 0.5);
+    border-radius: 10px;
+    gap: 5px;
+    color: #fff;
+
+}
+.chart1{
+    height: 100%;
+    width: 80%;
+    margin-left: 10px;
+
+}
+.myChart{
+    background-color: #1d1b1bd7;
+    color: white;
+
+}
+.chart2{
+    margin-right: 10px;
+
 }
 .main .columna{
     padding-left: 40px;
@@ -112,9 +159,40 @@ body{
     .dropdown-menu{
         margin: 20px -79px 0px;
     }
+    .graficos{
+        height: auto;
+        display: flex;
+
+    }
+}
+@media screen and (max-width:775px){
+    
+    .graficos{
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 5px;
+        align-items: center;
+        
+        
+    }
+    .chart1{
+        height: auto;
+        width: 80%;   
+    }    
+    .chart2{
+        height: 70%;
+        width: 80%;
+       
+    
+    }  
 }
 
 @media screen and (max-width:575px){
+    *{
+        box-sizing: border-box;
+    }
     .estructura {
         display: flex;
         
@@ -133,7 +211,18 @@ body{
     }
     body{
         font-size: 16px;
-        overflow: hidden;
+        overflow: scroll;
+    }
+     .main{
+        height: 1000px;
+    } 
+    .graficos{
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+        padding-top: 5px;
     }
    
 }
@@ -172,3 +261,4 @@ img{
 
 
 
+/* // {} ||   []  <> */
