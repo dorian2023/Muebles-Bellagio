@@ -4,8 +4,7 @@
   "description": "Inventario Muebles bellagio",
   "main": "server.js",
   "scripts": {
-    "dev": "npx nodemon server/server.js",
-    "start": "node server/server.js"
+    "start": "npx nodemon server/server.js"
   },
   "keywords": [],
   "author": "",
