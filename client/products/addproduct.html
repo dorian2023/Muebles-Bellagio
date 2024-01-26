@@ -21,7 +21,7 @@
       </div>
       <!-- TITULO MUEBLES BELLAGIO -->
       <div class="col-6 barra">
-        <p class="titulo-nav">MUEBLES BELLAGIO - INVENTARIO</p>
+        <p class="titulo-nav">MUEBLES BELLAGIO - AGREGAR PRODUCTOS</p>
       </div>
       <!-- ICONO PARA SALIR -->
       <div class="col-3 text-end barra">
@@ -33,7 +33,8 @@
                 <i class="fas fa-user-circle"></i>
               </a>
               <ul class="dropdown-menu">
-                      class="fas fa-sign-out-alt m-1"></i>Salir</a>
+                <li><a class="dropdown-item menuperfil cerrar" href="/"><i
+                  class="fas fa-sign-out-alt m-1"></i>Salir</a>
                 </li>
               </ul>
             </div>
@@ -63,33 +64,30 @@
           </ul>
         </nav>
       </div>
-      <!-- MAIN GRAFICOS -->
+      <!--------------------------------- CONTENIDO ----------------------->
       <main class="main">
         <div class="">
           <p class="tituloDisponibles">Agregar Nuevo Producto 🛋️</p>
           <div class="formContainer formulario2">
-            <form class="form" id="signup" enctype="multipart/form-data">
-              <div class="username">
-                <input type="text" id="titulo" class="inputText" placeholder="" name="titulo">
-                <label for="titulo">TITULO</label>
+            <form class="row g-3 p-5" id="signup" enctype="multipart/form-data">
+              <div class="col-md-6">
+                <span for="titulo">TITULO</span>
+                <input type="text" id="titulo" class="form-control" placeholder="" name="titulo">
              </div>
-              <div class="username">
-                <input type="text" id="descripcion" class="inputText" placeholder="" name="descripcion">
-                <label for="descripcion">DESCRIPCION</label>
+              <div class="col-md-6">
+                <span for="descripcion">DESCRIPCION</span>
+                <input type="text" id="descripcion" class="form-control" placeholder="" name="descripcion">
               </div>
-              <div class="username">
-                <input type="text" id="precio" class="inputText" placeholder="" name="precio">
-                <label for="precio">PRECIO</label>
+              <div class="col-md-6">
+                <span for="precio">PRECIO</span>
+                <input type="text" id="precio" class="form-control" placeholder="" name="precio">
               </div>
-              <div class="username">
-                <input type="text" id="Imagen" class="inputText" placeholder="" name="imagen">
-                <label for="imagen">IMAGEN</label>
+              <div class="col-md-6">
+                <span for="imagen">IMAGEN</span>
+                <input type="text" id="Imagen" class="form-control" placeholder="" name="imagen">
               </div>
-              <div class="btnIniReg">
-                <button id="btnIniciarSesion" type="submit">Agregar</button> 
-                <div class="registrarse" id="registrarse">
-                    Regresar a pagina principal <a href="./index.html">AQUI</a>
-                </div>
+              <div class="flexButton">
+                <button class="botonActualizar" id="btnIniciarSesion" type="submit">Agregar</button> 
               </div>
               
             </form>

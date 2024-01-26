@@ -6,13 +6,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Inventario - Productos Disponible</title>
   <link rel="stylesheet" href="../dashboard/dashboard.css">
-  <link rel="stylesheet" href="./index.css">
+  <link rel="stylesheet" href="../products/index.css">
+  <link rel="stylesheet" href="./inventario.css">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
 </head>
 <body>
   <!----------------------------------------HEADER----------------------------------->
-  <div class="container-fluid fixed-navbar">
+  <div class="container-fluid">
     <div class="row justify-content-center align-content-center">
       <div class="col-3 barra">
         <img src="../img/formLogo.jpg" alt="logo" class="logo">
@@ -29,7 +30,7 @@
                 <i class="fas fa-user-circle"></i>
               </a>
               <ul class="dropdown-menu">
-                <li><a class="dropdown-item menuperfil cerrar" href="../login/login.html"><i
+                <li><a class="dropdown-item menuperfil cerrar" href="/"><i
                       class="fas fa-sign-out-alt m-1"></i>Salir</a>
                 </li>
 
@@ -40,21 +41,20 @@
       </div>
     </div>
   </div>
-  
+
   <!--------------------------------MENU LATERAL Y CONTENIDO------------------------->
-  <div class="abajoheader">
+  <div class="">
     <div class="estructura">
-      <!-- MENU LATERAL -->
+        <!-- BARRA LATERAL -->
       <div class="barra-lateral col-12 col-sm-auto">
+        <!-- MENU BARRA LATERAL -->
         <nav class="menu d-flex d-sm-block justify-content-center flex-wrap">
           <a href="../dashboard/index.html"><i class="fas fa-home"></i><span>Inicio</span></a>
-          <a href="#"><i class="fas fa-couch"></i><span>Productos Disponibles</span></a>
+          <a href="../products/index.html"><i class="fas fa-couch"></i><span>Productos Disponibles</span></a>
           <a href="#"><i class="fas fa-warehouse"></i><span>Inventario</span></a>
-
+          <!-- CATOLOGO -->
           <a href="#" class="dropdown-toggle" id="catalogo-Dropdown" role="button" data-bs-toggle="dropdown"
-            aria-expanded="false">
-            <i class="fas fa-file-image"></i><span>Catálogo</span>
-          </a>
+            aria-expanded="false"><i class="fas fa-file-image"></i><span>Catálogo</span></a>
           <ul class="dropdown-menu" id="catalogo-Menu">
             <li><a class="dropdown-item" href="#">JUEGO DE RECIBO</a></li>
             <li><a class="dropdown-item" href="#">COMEDORES</a></li>
@@ -66,17 +66,61 @@
       <!-----------------------------------CONTENIDO------------------------------->
       <main class="main">
         <div class="">
-          <p class="tituloDisponibles">Productos Disponibles</p>
-          <div class="produtosDisponible">
-            <div id="loader"></div>
-            <div class="aggYbuscaProductos">
-              <button type="button" class="btnAgg" id="btnAddProduct"><span>INVENTARIO</span></button>
+          <p class="tituloDisponibles">INVENTARIO</p>
+          <div class="aggYbuscaProductos">
+            <button type="button" class="btnAgg" id="btnAddProduct"><span>Agregar Producto</span></button>
+            <div class="inputYbutton">
+              <input type="text" id="inputSearch">
+              <button type="button" class="btnAgg" id="btnSearch"><span>Buscar</span></button>
+            </div>
           </div>
+
+          <div class="tarjetasProductos">
+            <div class="productList" id="productList"></div>
+            <div class="" id="product"></div>
+          </div>
+          <!-- <div class="tabla">
+            <table id="tablaInventario" class="table table-hover">
+              <thead class="table-dark">
+                  <tr>
+                      <th>CODIGO</th>
+                      <th>PEDIDO</th>
+                      <th>CATEGORIA</th>
+                      <th>DESCRIPCION</th>
+                      <th>TIENDA</th>
+                      <th>VENDEDOR</th>
+                      <th>CLIENTE</th>
+                      <th>TRANSPORTE</th>
+                      <th>FECHA DE ENTRADA</th>
+                      <th>FECHA DE SALIDA</th>
+                      <th>STATUS</th>
+                  </tr>
+              </thead>
+              <tbody>
+                <tr>
+                    <td>...</td>
+                    <td>...</td>
+                    <td>...</td>
+                    <td>...</td>
+                    <td>...</td>
+                    <td>...</td>
+                    <td>...</td>
+                    <td>...</td>
+                    <td>...</td>
+                    <td>...</td>
+                    <td>...</td>
+                </tr>
+            </tbody>
+            </table>
+          </div>  -->
         </div>
       </main>         
     </div>
   </div>
 
+  <!-- SCRIPTS -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <!-- <script type="module" src="../products/product.js"></script> -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
     crossorigin="anonymous"></script>
@@ -88,7 +132,7 @@
     crossorigin="anonymous"></script>
   <script src="https://kit.fontawesome.com/646c794df3.js" crossorigin="anonymous"></script>
   <!-- SCRIPTS PERSONALES -->
-  <script type="module" src="product.js"></script>
+  <script src="./inventario.js"></script>
   <script>
     document.addEventListener("DOMContentLoaded", function () {
       var dropdownToggle = document.querySelector('.dropdown-toggle');
