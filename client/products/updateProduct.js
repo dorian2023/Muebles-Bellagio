@@ -10,7 +10,7 @@ console.log(productID);
 
 //ME OBTIENE EL ID CON EL METODO FECHT
 const getProductByID = async (id) => {
-    const productData = await fetch(`http://localhost:3100/products?id=${id}`,{
+    const productData = await fetch(`http://localhost:4000/api/v1/products?id=${id}`,{
         method: 'GET',
     })
     const resultData = await productData.json();
@@ -18,7 +18,7 @@ const getProductByID = async (id) => {
 }
 
 const updateAProduct = async (idProduct, changeProduct) => {
-    const productData = await fetch(`http://localhost:3100/products/${idProduct}`,{
+    const productData = await fetch(`http://localhost:4000/api/v1/products/${idProduct}`,{
         method: 'PATCH',
         headers:{
             'Content-Type': 'application/json',

@@ -1,6 +1,5 @@
 const {
     auth,
-    db,
 } = require('./model');
 
 
@@ -9,13 +8,19 @@ function addUser(userData) {
     return auth.createUser(userData);
 }
 
-async function saveUserInFirestore(userData) {
-    const docRef = db.collection('users')
-    return await docRef.add(userData);
+// permisos
+
+async function addPermissions(uid, objectRole){
+    return await auth.setCustomUserClaims(uid, objectRole)
+};
+
+async function customToken(uid){
+    return await auth.createCustomToken(uid);
 }
 
 
 function getUsers(email) {
+
     if (email) {
         return auth.getUserByEmail(email);
     }
@@ -25,8 +30,7 @@ function getUsers(email) {
 
 module.exports = {
     add: addUser,
-    save: saveUserInFirestore,
+    role: addPermissions,
+    customToken,
     list: getUsers,
 }
-
-// {}

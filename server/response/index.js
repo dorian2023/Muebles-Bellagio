@@ -5,14 +5,10 @@ exports.success = (req, res, message, statusCode) => {
     })
 };
 
-exports.error = (req, res, message, errorDetails) => {
+exports.error = (req, res, message, statusCode, errorDetails) => {
     console.log('[Require Error]: ', errorDetails)
     res.status(statusCode).send({
         error: message || 'Internal Error',
         message: ''
     })
 };
-
-
-
-// {}||   []

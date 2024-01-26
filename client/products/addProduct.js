@@ -1,4 +1,4 @@
-const form = document.getElementById('myForm');
+const form = document.getElementById('signup');
 const titleProduct = document.getElementById('titulo');
 const descriptionProduct = document.getElementById('descripcion');
 const priceProduct = document.getElementById('precio');
@@ -10,7 +10,7 @@ console.log(clientID);
 
 const saveANewProduct = async (product) => {
 
-    const productData = await fetch ('http://localhost:3100/products', {
+    const productData = await fetch ('http://localhost:4000/api/v1/products', {
         method: 'POST',
         headers: { 
             'Content-Type' : 'application/json'

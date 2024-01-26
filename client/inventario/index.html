@@ -4,26 +4,22 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Inventario - Agregar Producto</title>
+  <title>Inventario - Productos Disponible</title>
   <link rel="stylesheet" href="../dashboard/dashboard.css">
-  <link rel="stylesheet" href="../products/index.css">
-  <link rel="stylesheet" href="../login/login.css">
+  <link rel="stylesheet" href="./index.css">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
 </head>
 <body>
-  <!-- ENCABEZADO DE LA PAGINA -->
-  <div class="container-fluid">
+  <!----------------------------------------HEADER----------------------------------->
+  <div class="container-fluid fixed-navbar">
     <div class="row justify-content-center align-content-center">
-      <!-- LOGO MUEBLES BELLAGIO -->
       <div class="col-3 barra">
         <img src="../img/formLogo.jpg" alt="logo" class="logo">
       </div>
-      <!-- TITULO MUEBLES BELLAGIO -->
       <div class="col-6 barra">
         <p class="titulo-nav">MUEBLES BELLAGIO - INVENTARIO</p>
       </div>
-      <!-- ICONO PARA SALIR -->
       <div class="col-3 text-end barra">
         <ul class="navbar-nav mr-auto">
           <li>
@@ -36,6 +32,7 @@
                 <li><a class="dropdown-item menuperfil cerrar" href="../login/login.html"><i
                       class="fas fa-sign-out-alt m-1"></i>Salir</a>
                 </li>
+
               </ul>
             </div>
           </li>
@@ -43,19 +40,21 @@
       </div>
     </div>
   </div>
-  <!-- BARRA LATERAL Y FORMULARIO DE AGREGAR PRODUCTO -->
-  <div class="">
+  
+  <!--------------------------------MENU LATERAL Y CONTENIDO------------------------->
+  <div class="abajoheader">
     <div class="estructura">
-      <!-- BARRA LATERAL -->
+      <!-- MENU LATERAL -->
       <div class="barra-lateral col-12 col-sm-auto">
-        <!-- MENU BARRA LATERAL -->
         <nav class="menu d-flex d-sm-block justify-content-center flex-wrap">
-          <a href="#"><i class="fas fa-home"></i><span>Inicio</span></a>
-          <a href="../products/index.html"><i class="fas fa-couch"></i><span>Productos Disponibles</span></a>
+          <a href="../dashboard/index.html"><i class="fas fa-home"></i><span>Inicio</span></a>
+          <a href="#"><i class="fas fa-couch"></i><span>Productos Disponibles</span></a>
           <a href="#"><i class="fas fa-warehouse"></i><span>Inventario</span></a>
-          <!-- CATOLOGO -->
+
           <a href="#" class="dropdown-toggle" id="catalogo-Dropdown" role="button" data-bs-toggle="dropdown"
-            aria-expanded="false"><i class="fas fa-file-image"></i><span>Catálogo</span></a>
+            aria-expanded="false">
+            <i class="fas fa-file-image"></i><span>Catálogo</span>
+          </a>
           <ul class="dropdown-menu" id="catalogo-Menu">
             <li><a class="dropdown-item" href="#">JUEGO DE RECIBO</a></li>
             <li><a class="dropdown-item" href="#">COMEDORES</a></li>
@@ -64,46 +63,20 @@
           </ul>
         </nav>
       </div>
-      <!-- MAIN GRAFICOS -->
+      <!-----------------------------------CONTENIDO------------------------------->
       <main class="main">
         <div class="">
-          <p class="tituloDisponibles">Agregar Nuevo Producto 🛋️</p>
-          <div class="formContainer formulario2">
-            <form class="form" id="signup" enctype="multipart/form-data">
-              <div class="username">
-                <input type="text" id="titulo" class="inputText" placeholder="" name="titulo">
-                <label for="titulo">TITULO</label>
-             </div>
-              <div class="username">
-                <input type="text" id="descripcion" class="inputText" placeholder="" name="descripcion">
-                <label for="descripcion">DESCRIPCION</label>
-              </div>
-              <div class="username">
-                <input type="text" id="precio" class="inputText" placeholder="" name="precio">
-                <label for="precio">PRECIO</label>
-              </div>
-              <div class="username">
-                <input type="text" id="Imagen" class="inputText" placeholder="" name="imagen">
-                <label for="imagen">IMAGEN</label>
-              </div>
-              <div class="btnIniReg">
-                <button id="btnIniciarSesion" type="submit">Agregar</button> 
-                <div class="registrarse" id="registrarse">
-                    Regresar a pagina principal <a href="./index.html">AQUI</a>
-                </div>
-              </div>
-              
-            </form>
+          <p class="tituloDisponibles">Productos Disponibles</p>
+          <div class="produtosDisponible">
+            <div id="loader"></div>
+            <div class="aggYbuscaProductos">
+              <button type="button" class="btnAgg" id="btnAddProduct"><span>INVENTARIO</span></button>
           </div>
         </div>
-      </main>
+      </main>         
     </div>
   </div>
-  
 
-  <!-- SCRIPTS -->
-  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-  <!-- <script type="module" src="../products/product.js"></script> -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
     crossorigin="anonymous"></script>
@@ -114,27 +87,26 @@
     integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
     crossorigin="anonymous"></script>
   <script src="https://kit.fontawesome.com/646c794df3.js" crossorigin="anonymous"></script>
-  <!-- SCRIPT PERSONALES -->
-  <script src="./addProduct.js"></script>
+  <!-- SCRIPTS PERSONALES -->
+  <script type="module" src="product.js"></script>
   <script>
-    //FUNCION PARA EXTENDER EL SUB-MENU EN EL ICONO DE USUARIO
     document.addEventListener("DOMContentLoaded", function () {
-        var dropdownToggle = document.querySelector('.dropdown-toggle');
-        var dropdownMenu = document.querySelector('.dropdown-menu');
+      var dropdownToggle = document.querySelector('.dropdown-toggle');
+      var dropdownMenu = document.querySelector('.dropdown-menu');
 
-        dropdownToggle.addEventListener('click', function () {
-          dropdownMenu.classList.toggle('show');
-        });
+      dropdownToggle.addEventListener('click', function () {
+        dropdownMenu.classList.toggle('show');
+      });
     });
 
     //FUNCION PARA EXTENDER EL SUB-MENU EN CATALOGO
     document.addEventListener("DOMContentLoaded", function () {
-        var catalogoToggle = document.getElementById('catalogo-Dropdown');
-        var catalogoMenu = document.getElementById('catalogo-Menu');
+      var catalogoToggle = document.getElementById('catalogo-Dropdown');
+      var catalogoMenu = document.getElementById('catalogo-Menu');
 
-        catalogoToggle.addEventListener('click', function () {
-          catalogoMenu.classList.toggle('show');
-        });
+      catalogoToggle.addEventListener('click', function () {
+        catalogoMenu.classList.toggle('show');
+      });
     });
   </script>
 </body>

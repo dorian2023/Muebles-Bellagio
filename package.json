@@ -2,8 +2,11 @@
   "name": "muebles-bellagio",
   "version": "1.0.0",
   "description": "Inventario Muebles bellagio",
-  "main": "server.js",
-  "scripts": {"start": "npx nodemon server/server.js"},
+  "main": "index.js",
+  "scripts": {
+    "start": "npx nodemon server/server.js",
+    "dev": "npx nodemon index.js"
+  },
   "keywords": [],
   "author": "",
   "license": "ISC",

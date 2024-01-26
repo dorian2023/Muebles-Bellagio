@@ -4,9 +4,10 @@ const controller = require('./controller');
 const response = require('../../response/index');
 
 
-router.get('/', (req, res) => {    
-    if (req.query.email) {
-        controller.getUsers(req.query.email)
+router.get('/', (req, res) => { 
+    const email = req.query.email;    
+    if (email) {
+        controller.getUsers(email)
         .   then((user) => response.success(req, res, user, 200))
             .catch((error) => response.error(req, res, 'Error Interno', 500, error));
     } else {
@@ -18,18 +19,8 @@ router.get('/', (req, res) => {
 
 router.post('/', (req, res) => {
     controller.addUser(req.body)
-     .then((user) => response.success(req, res, user, 200))
-     .then(() => controller.saveUser(req.body)
-        .then(() => console.log('successfully')))
+     .then((user) => response.success(req, res, user, 201))
      .catch((error) => response.error(req, res, 'Error Interno', 500, error))
 });
 
-// Nueva ruta para el inicio de sesión
-router.post('/login', (req, res) => {
-    controller.login(req.body)
-        .then((result) => response.success(req, res, result, 200))
-        .catch((error) => response.error(req, res, 'Error Interno', 500, error));
-});
-
 module.exports = router;
-// {}||   [] <>

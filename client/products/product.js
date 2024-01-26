@@ -7,7 +7,7 @@ const btnSearch = document.getElementById('btnSearch');
 
 //AQUI MUESTRA ENESTA RUTA EL OBJETO JSON CON TODOS LOS PRODUCTOS DE LA BASE DE DATOS
 const printProductList = async () =>{
-    const dataList = await fetch('http://localhost:3100/products', { 
+    const dataList = await fetch('http://localhost:4000/api/v1/products', { 
         method: 'GET',
     });
     const dataResult = await dataList.json();
@@ -26,26 +26,28 @@ document.addEventListener('DOMContentLoaded', () => {
             } else {
                 const listProducts = products.message.map(products =>{
 
-                    function updateProduct() {
-                        return window.location.href = './updateproduct.html';
-                    }
+                    // function updateProduct() {
+                    //     return window.location.href = './updateproduct.html';
+                    // }
 
                     const buttons = () => `
-                        <button class="update" id="btnUpdateProduct">Actualizar Product</button>
-                        <button class="delete" id="btnDeleteProduct">Eliminar Producto</button>
-                        `
+                    <div class="buttons-container">
+                        <button class="update" id="btnUpdateProduct">🔄️</button>
+                        <button class="delete" id="btnDeleteProduct">⛔</button>
+                    </div>
+                    `;
                     const printProduct = `
                     <div class="productContainer" id=${products.id}>
                         <ul class="listProduct">
                             <li>CATEGORIA: ${products.product.title}</li>
                             <li>DESCRIPCION: ${products.product.descripcion}</li>  
-                            <li>PRECIO: ${products.product.precio}</li>  
+                            <li>CODIGO: ${products.product.precio}</li>  
                             <img src="${products.product.image}" />
+                            ${buttons()}
                         </ul>
-                        </div>
-                        `;
-                        return printProduct;
-                        // ${buttons()}----> este va abajo del ul para q salgan los botonos en el cuadro de los productos
+                    </div>
+                    `;
+                    return printProduct;
                         
                     });
                     productList.innerHTML = listProducts.join("");
@@ -57,18 +59,45 @@ document.addEventListener('DOMContentLoaded', () => {
 productsList.addEventListener("click", e => {
     let idProduct;
 
-    if (e.target.closest('.update')) {
-        idProduct = e.target.parentElement.id;
-        window.location.href = `./updateproduct.html?id=${idProduct}`
+    // Buscar el contenedor del producto
+    const productContainer = e.target.closest('.productContainer');
+
+    if (productContainer) {
+        // Obtener el ID del producto del atributo "id"
+        idProduct = productContainer.id;
+        
+        if (e.target.classList.contains('update')) {
+            // Redirigir a la página de actualización con el ID del producto
+            window.location.href = `./updateproduct.html?id=${idProduct}`;
+        }
+        
+        if (e.target.classList.contains('delete')) {
+            // Realizar la lógica para eliminar el producto
+            console.log(idProduct);
+            deleteProduct(idProduct)
+                .then(() => productContainer.remove())
+                .catch((error) => console.error(error));
+        }
     }
-    if (e.target.closest('.delete')) {
-        idProduct = e.target.parentElement.id;
-        console.log(e.target.parentElement.id);
-        deleteProduct(idProduct)
-        .then(() => e.target.parentElement.remove())
-        .catch((error) => console.error(error))
-    }
-})
+});
+
+
+
+// productsList.addEventListener("click", e => {
+//     let idProduct;
+
+//     if (e.target.closest('.update')) {
+//         idProduct = e.target.parentElement.id;
+//         window.location.href = `./updateproduct.html?id=${idProduct}`
+//     }
+//     if (e.target.closest('.delete')) {
+//         idProduct = e.target.parentElement.id;
+//         console.log(e.target.parentElement.id);
+//         deleteProduct(idProduct)
+//         .then(() => e.target.parentElement.remove())
+//         .catch((error) => console.error(error))
+//     }
+// })
 
 // setTimeout(() => {
 //     const btnUpdateProduct = document.getElementById("btnUpdateProduct");
@@ -85,7 +114,7 @@ btnAddProduct.addEventListener('click', () => {
 
 //FUNCION PARA ELIMINAR EL PRODUCTO DESDE EL FRONTEND
 const deleteProduct = async (id) => {
-    const deletedProduct = await fetch(`http://localhost:3100/products/${id}`,{
+    const deletedProduct = await fetch(`http://localhost:4000/api/v1/products/${id}`,{
         method: 'DELETE',
     })
     const deleteSuccess = await deletedProduct.json();
@@ -94,7 +123,7 @@ const deleteProduct = async (id) => {
 
 //FUNCION PARA BOTON BUSCAR
 const getOneProduct = async (titleProduct) => {    
-    const oneProduct = await fetch(`http://localhost:3100/products?title=${titleProduct}`, {
+    const oneProduct = await fetch(`http://localhost:4000/api/v1/products?title=${titleProduct}`, {
         method: 'GET',
     });
 
@@ -114,20 +143,23 @@ btnSearch.addEventListener('click', () => {
             const listProducts = products.message.map(products =>{
 
                 const buttons = () => `
-                    <button id="btnUpdateProduct">Actualizar Product</button>
-                    <button id="btnDeleteProduct">Eliminar Producto</button>
-                    `
+                <div class="buttons-container">
+                    <button class="update" id="btnUpdateProduct">🔄️</button>
+                    <button class="delete" id="btnDeleteProduct">⛔</button>
+                </div>
+                `;
                 const getOneProduct = `
                 <div class="productContainer" id=${products.id}>
-                        <ul class="listProduct">
-                            <li>CATEGORIA: ${products.product.title}</li>
-                            <li>DESCRIPCION: ${products.product.descripcion}</li>  
-                            <li>PRECIO: ${products.product.precio}</li>  
-                            <img src="${products.product.imagen}" />
-                        </ul>
+                    <ul class="listProduct">
+                        <li>CATEGORIA: ${products.product.title}</li>
+                        <li>DESCRIPCION: ${products.product.descripcion}</li>  
+                        <li>CODIGO: ${products.product.precio}</li>  
+                        <img src="${products.product.image}" />
                         ${buttons()}
-                    </div>
-                    `;
+                    </ul>
+                </div>
+                `;
+
                 return getOneProduct;
 
             });
