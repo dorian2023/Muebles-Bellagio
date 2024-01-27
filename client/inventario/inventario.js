@@ -25,29 +25,24 @@ document.addEventListener('DOMContentLoaded', () => {
                 return loaderDiv.innerHTML = `<h2>Cargando...</h2>`;
             } else {
                 const listProducts = inventario.message.map(inventario =>{
-
-                    // function updateProduct() {
-                    //     return window.location.href = './updateproduct.html';
-                    // }
-
                     const buttons = () => `
                     <div class="buttons-container">
-                        <button class="update" id="btnUpdateProduct">🔄️</button>
-                        <button class="delete" id="btnDeleteProduct">⛔</button>
+                        <button class="update" id="btnUpdate">🔄️</button>
+                        <button class="delete" id="btnDelete">⛔</button>
                     </div>
                     `;
                     const printProduct = `
                     <div class="productContainer" id=${inventario.id}>
                         <ul class="listProduct">
+                            <li>STATUS: ${inventario.product.status}</li>  
                             <li>CATEGORIA: ${inventario.product.categoria}</li>
+                            <li>DESCRIPCION: ${inventario.product.descripcion}</li>  
                             <li>CODIGO: ${inventario.product.codigo}</li>  
                             <li>PEDIDO: ${inventario.product.pedido}</li>  
-                            <li>DESCRIPCION: ${inventario.product.descripcion}</li>  
                             <li>TIENDA: ${inventario.product.tienda}</li>  
                             <li>VENDEDOR: ${inventario.product.vendedor}</li>  
                             <li>CLIENTE: ${inventario.product.cliente}</li>  
                             <li>TRANSPORTE: ${inventario.product.transporte}</li>  
-                            <li>STATUS: ${inventario.product.status}</li>  
                             <li>FECHA ENTRADA: ${inventario.product.fe}</li>  
                             <li>FECHA SALIDA: ${inventario.product.fs}</li>  
                             ${buttons()}
@@ -55,7 +50,6 @@ document.addEventListener('DOMContentLoaded', () => {
                     </div>
                     `;
                     return printProduct;
-                        
                     });
                     productList.innerHTML = listProducts.join("");
             }
@@ -75,7 +69,7 @@ productsList.addEventListener("click", e => {
         
         if (e.target.classList.contains('update')) {
             // Redirigir a la página de actualización con el ID del producto
-            window.location.href = `./updateproduct.html?id=${idProduct}`;
+            window.location.href = `./actualizarProducto.html?id=${idProduct}`;
         }
         
         if (e.target.classList.contains('delete')) {
@@ -116,7 +110,7 @@ productsList.addEventListener("click", e => {
 // }, 6000)
 
 btnAddProduct.addEventListener('click', () => {
-    window.location.href = "./addproduct.html";
+    window.location.href = "./actualizarProducto.html";
 });
 
 //FUNCION PARA ELIMINAR EL PRODUCTO DESDE EL FRONTEND
@@ -139,7 +133,7 @@ const getOneProduct = async (titleProduct) => {
 }
 
 //BOTON BUSCAR
-btnSearch.addEventListener('click', () => {
+/*btnSearch.addEventListener('click', () => {
     const productDetails = inputSearch.value || '';
     getOneProduct(productDetails)
     .then((products) => {
@@ -174,4 +168,4 @@ btnSearch.addEventListener('click', () => {
         }
     })     
     .catch((error) => console.log(error));
-});
+});*/
