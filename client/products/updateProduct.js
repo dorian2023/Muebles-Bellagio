@@ -56,7 +56,7 @@ btnUpdate.addEventListener('click', () => {
         image: imageUpdate
     }
     updateAProduct(productID, changeProduct)
-        .then(() => window.location.href = './index.hmtl')
+        .then(() => window.location.href = './index.html')
         .catch((error) => console.error(error));
 });
 

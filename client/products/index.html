@@ -51,6 +51,7 @@
           <a href="../dashboard/index.html"><i class="fas fa-home"></i><span>Inicio</span></a>
           <a href="#"><i class="fas fa-couch"></i><span>Productos Disponibles</span></a>
           <a href="../inventario/index.html"><i class="fas fa-warehouse"></i><span>Inventario</span></a>
+          <a href="../inventario/tablas.html"><i class="fas fa-warehouse"></i><span>Tablas</span></a>
           <!-- CATOLOGO -->
           <a href="#" class="dropdown-toggle" id="catalogo-Dropdown" role="button" data-bs-toggle="dropdown"
             aria-expanded="false"><i class="fas fa-file-image"></i><span>Catálogo</span></a>
@@ -71,7 +72,18 @@
             <div class="aggYbuscaProductos">
               <button type="button" class="btnAgg" id="btnAddProduct"><span>Agregar Producto</span></button>
               <div class="inputYbutton">
-                <input type="text" id="inputSearch">
+                <input type="text" id="inputSearch" list="opcionesBusqueda">
+                    <datalist id="opcionesBusqueda">
+                        <option value="">
+                        <option value="MODULAR">
+                        <option value="SOFA">
+                        <option value="POLTRONA">
+                        <option value="DORMITORIO">
+                          <option value="COLCHON">
+                          <option value="COMEDOR">
+                          <option value="ESPEJO">
+                        <option value="MESA DE CENTRO">
+                    </datalist>
                 <button type="button" class="btnAgg" id="btnSearch"><span>Buscar</span></button>
               </div>
             </div>
