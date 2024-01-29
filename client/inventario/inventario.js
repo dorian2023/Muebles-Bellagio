@@ -83,34 +83,8 @@ productsList.addEventListener("click", e => {
 });
 
 
-
-// productsList.addEventListener("click", e => {
-//     let idProduct;
-
-//     if (e.target.closest('.update')) {
-//         idProduct = e.target.parentElement.id;
-//         window.location.href = `./updateproduct.html?id=${idProduct}`
-//     }
-//     if (e.target.closest('.delete')) {
-//         idProduct = e.target.parentElement.id;
-//         console.log(e.target.parentElement.id);
-//         deleteProduct(idProduct)
-//         .then(() => e.target.parentElement.remove())
-//         .catch((error) => console.error(error))
-//     }
-// })
-
-// setTimeout(() => {
-//     const btnUpdateProduct = document.getElementById("btnUpdateProduct");
-//     if (btnUpdateProduct) {
-//         btnUpdateProduct.addEventListener('click', () => {
-//             window.location.href = "./updateproduct.html";
-//     })
-//     }
-// }, 6000)
-
 btnAddProduct.addEventListener('click', () => {
-    window.location.href = "./actualizarProducto.html";
+    window.location.href = "./agregarProductos.html";
 });
 
 //FUNCION PARA ELIMINAR EL PRODUCTO DESDE EL FRONTEND
