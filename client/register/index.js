@@ -22,7 +22,7 @@ const form = document.getElementById('signup');
 
 const registerUser = async (user) => {
     try {
-        const createUser = await fetch('http://localhost:4000/api/v1/users', {
+        const createUser = await fetch('https://inventario-mb.onrender.com/api/v1/users', {
             method: 'POST',
             headers: {
                 'Content-Type' : 'application/json'

@@ -1,17 +1,16 @@
 // const { response } = require("express");
 
 const form = document.getElementById('signup');
-const titleProduct = document.getElementById('titulo');
+const titleProduct = document.getElementById('title');
 const descriptionProduct = document.getElementById('descripcion');
 const priceProduct = document.getElementById('precio');
-const imageProduct = document.getElementById('Imagen');
+const imageProduct = document.getElementById('imagen');
 const btnAdd = document.getElementById('btnAdd');
 
 
 
 const saveANewProduct = async (product) => {
-
-    const productData = await fetch ('https://inventario-mb.onrender.com/api/v1/products', {
+    const productData = await fetch('https://inventario-mb.onrender.com/api/v1/products', {
         method: 'POST',
         headers: { 
             'Content-Type' : 'application/json'
@@ -23,22 +22,19 @@ const saveANewProduct = async (product) => {
     return newProduct;
 }
 
-btnAdd.addEventListener('click', () => {    
+btnAdd.addEventListener('click', ()=>{
     const productValues = {
-       title : titleProduct.value,
-       description: descriptionProduct.value,
-       price: priceProduct.value,
-       image: imageProduct.value,
+        title: titleProduct.value,
+        descripcion: descriptionProduct.value,
+        precio: priceProduct.value,
+        image:  imageProduct.value,
     }
     saveANewProduct(productValues)
-        .then((response) => {
+        .then((response) =>{
             console.log(response);
-            window.location.href = "./index.html";
-            })
-            .catch((error) => console.log(error))
-    });
-
-  
+            window.location.href = './index.html'
+        })
+})
 
 // form.addEventListener('submit', (event)=> {
 //     event.preventDefault();

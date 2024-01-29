@@ -28,14 +28,6 @@ router.post('/', (req, res) => {
     .catch((error) => response.error(req, res, 'Internal Error', 500, error));
 });
 
-// router.patch('/:id', (req, res) => {
-//     const id = req.params.id;
-//     const change = req.body;
-//     controller.updateProduct(id, change)
-//         .then((changedProduct) => response.success(req, res, changedProduct, 200))
-//         .catch((error) => response.error(req, res, 'Internal Error', 500, error));
-// });
-
 router.patch('/:id', (req, res) => {
     const id = req.params.id;
     const change = req.body;

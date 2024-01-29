@@ -1,23 +1,20 @@
-const form = document.getElementById('signup');
-const status = document.getElementById('status');
-const pedido = document.getElementById('pedido');
-const codigo = document.getElementById('codigo');
-const categoria = document.getElementById('categoria');
-const descripcion = document.getElementById('descripcion');
-const tienda = document.getElementById('tienda');
-const vendedor = document.getElementById('vendedor');
-const cliente = document.getElementById('cliente');
-const transporte = document.getElementById('transporte');
-const fe = document.getElementById('fe');
-const fs = document.getElementById('fs');
-// const btnAdd = document.getElementById('btnAdd');
+const statusProduct = document.getElementById('status');
+const pedidoProduct = document.getElementById('pedido');
+const codigoProduct = document.getElementById('codigo');
+const categoriaProduct = document.getElementById('categoria');
+const descripcionProduct = document.getElementById('descripcion');
+const tiendaProduct = document.getElementById('tienda');
+const vendedorProduct = document.getElementById('vendedor');
+const clienteProduct = document.getElementById('cliente');
+const transporteProduct = document.getElementById('transporte');
+const feProduct = document.getElementById('fe');
+const fsProduct = document.getElementById('fs');
+const btnAdd = document.getElementById('btnAdd');
 
-// const clientID = "f00bc3fa8e97aea";
-// console.log(clientID);
+
 
 const saveANewProduct = async (product) => {
-
-    const productData = await fetch ('https://inventario-mb.onrender.com/api/v1/inventario', {
+    const productData = await fetch('https://inventario-mb.onrender.com/api/v1/inventario', {
         method: 'POST',
         headers: { 
             'Content-Type' : 'application/json'
@@ -28,3 +25,24 @@ const saveANewProduct = async (product) => {
     console.log(newProduct);
     return newProduct;
 }
+
+btnAdd.addEventListener('click', ()=>{
+    const productValues = {
+        status: statusProduct.value,
+        pedido: pedidoProduct.value,
+        codigo: codigoProduct.value,
+        categoria: categoriaProduct.value,
+        descripcion: descripcionProduct.value,
+        tienda: tiendaProduct.value,
+        vendedor: vendedorProduct.value,
+        cliente:  clienteProduct.value,
+        transporte:  transporteProduct.value,
+        fe:  feProduct.value,
+        fs:  fsProduct.value,
+    }
+    saveANewProduct(productValues)
+        .then((response) =>{
+            console.log(response);
+            window.location.href = './index.html'
+        })
+})
