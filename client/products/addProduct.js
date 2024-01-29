@@ -1,9 +1,11 @@
+const { response } = require("express");
+
 const form = document.getElementById('signup');
 const titleProduct = document.getElementById('titulo');
 const descriptionProduct = document.getElementById('descripcion');
 const priceProduct = document.getElementById('precio');
 const imageProduct = document.getElementById('Imagen');
-// const btnAdd = document.getElementById('btnAdd');
+const btnAdd = document.getElementById('btnAdd');
 
 
 
@@ -20,6 +22,23 @@ const saveANewProduct = async (product) => {
     console.log(newProduct);
     return newProduct;
 }
+
+btnAdd.addEventListener('click', () => {    
+    const productValues = {
+       title : titleProduct.value,
+       description: descriptionProduct.value,
+       price: priceProduct.value,
+       image: imageProduct.value,
+    }
+    saveANewProduct(productValues)
+        .then((response) => {
+            console.log(response);
+            window.location.href = "./index.html";
+            })
+            .catch((error) => console.log(error))
+    });
+
+  
 
 // form.addEventListener('submit', (event)=> {
 //     event.preventDefault();
