@@ -60,7 +60,6 @@ document.addEventListener('DOMContentLoaded', () => {
 productsList.addEventListener("click", e => {
     let idProduct;
 
-    // Buscar el contenedor del producto
     const productContainer = e.target.closest('.productContainer');
 
     if (productContainer) {
@@ -84,7 +83,7 @@ productsList.addEventListener("click", e => {
 
 
 btnAddProduct.addEventListener('click', () => {
-    window.location.href = "./agregarProductos.html";
+    window.location.href = "./agregarProducto.html";
 });
 
 //FUNCION PARA ELIMINAR EL PRODUCTO DESDE EL FRONTEND

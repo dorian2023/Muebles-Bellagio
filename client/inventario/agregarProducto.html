@@ -96,7 +96,7 @@
       <main class="main">
         <div class="">
           <p class="tituloDisponibles">AGREGAR PRODUCTO NUEVO - INVENTARIO</p>
-          <form class="row g-3 p-5" id="signup">
+          <form class="row g-3 p-5" id="signup" enctype="multipart/form-data">
             <div class="col-md-6">
                 <span class="form-label" id="basic-addon1">STATUS</span>
                 <input type="text" class="form-control" placeholder="" aria-label="Username" aria-describedby="basic-addon1" id="status">
@@ -141,12 +141,8 @@
                 <span class="form-label" id="basic-addon1">FECHA DE SALIDA</span>
                 <input type="text" class="form-control" placeholder="" aria-label="Username" aria-describedby="basic-addon1" id="fs">
             </div>
-            <div class="col-md-6">
-                <span class="form-label" id="basic-addon1">IMAGEN</span>
-                <input type="text" class="form-control" placeholder="" aria-label="Username" aria-describedby="basic-addon1" id="image">
-            </div>
             <div class="flexButton">
-                <button class="botonActualizar" id="btnUpdate" type="">Actualizar</button>
+                <button class="botonActualizar" id="btnIniciarSesion" type="submit">Agregar</button> 
             </div>
           </form>
         </div>
@@ -166,7 +162,7 @@
     crossorigin="anonymous"></script>
   <script src="https://kit.fontawesome.com/646c794df3.js" crossorigin="anonymous"></script>
   <!-- SCRIPTS PERSONALES -->
-  <script src="agregarProducto.js"></script>
+  <script src="./agregarProducto.js"></script>
   <script>
     //FUNCION PARA EXTENDER EL MENU DE SALIR
     document.addEventListener("DOMContentLoaded", function () {

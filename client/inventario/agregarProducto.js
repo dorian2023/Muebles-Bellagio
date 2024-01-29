@@ -12,12 +12,12 @@ const fe = document.getElementById('fe');
 const fs = document.getElementById('fs');
 // const btnAdd = document.getElementById('btnAdd');
 
-const clientID = "f00bc3fa8e97aea";
-console.log(clientID);
+// const clientID = "f00bc3fa8e97aea";
+// console.log(clientID);
 
 const saveANewProduct = async (product) => {
 
-    const productData = await fetch ('https://inventario-mb.onrender.com/api/v1/invetario', {
+    const productData = await fetch ('https://inventario-mb.onrender.com/api/v1/inventario', {
         method: 'POST',
         headers: { 
             'Content-Type' : 'application/json'

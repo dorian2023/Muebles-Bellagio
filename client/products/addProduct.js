@@ -5,8 +5,7 @@ const priceProduct = document.getElementById('precio');
 const imageProduct = document.getElementById('Imagen');
 // const btnAdd = document.getElementById('btnAdd');
 
-const clientID = "f00bc3fa8e97aea";
-console.log(clientID);
+
 
 const saveANewProduct = async (product) => {
 
