@@ -2,7 +2,7 @@
 
 //FETCH A LA RUTA PARA OBTENER LOS PRODUCTOS
 const printProductList = async () => {
-    const dataList = await fetch('https://inventario-mb.onrender.com/api/v1/inventario', {
+    const dataList = await fetch('https://inventario-mb.onrender.com/api/v1/products', {
       method: 'GET',
     });
     const dataResult = await dataList.json();
