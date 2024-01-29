@@ -7,7 +7,7 @@ const btnSearch = document.getElementById('btnSearch');
 
 //AQUI MUESTRA ENESTA RUTA EL OBJETO JSON CON TODOS LOS PRODUCTOS DE LA BASE DE DATOS
 const printProductList = async () =>{
-    const dataList = await fetch('http://localhost:4000/api/v1/inventario', { 
+    const dataList = await fetch('https://inventario-mb.onrender.com/api/v1/inventario', { 
         method: 'GET',
     });
     const dataResult = await dataList.json();
