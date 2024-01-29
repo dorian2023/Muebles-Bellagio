@@ -1,7 +1,7 @@
 // const { error } = require("../../server/response");
 
 const productsList = document.getElementById('productList');
-const btnAddProduct = document.getElementById('btnAddProduct');
+const btnAddProduct = document.getElementById('btnAddProduct2');
 const inputSearch = document.getElementById('inputSearch');
 const btnSearch = document.getElementById('btnSearch');
 

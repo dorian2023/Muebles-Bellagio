@@ -17,7 +17,7 @@ console.log(clientID);
 
 const saveANewProduct = async (product) => {
 
-    const productData = await fetch ('https://inventario-mb.onrender.com/api/v1/products', {
+    const productData = await fetch ('https://inventario-mb.onrender.com/api/v1/invetario', {
         method: 'POST',
         headers: { 
             'Content-Type' : 'application/json'
