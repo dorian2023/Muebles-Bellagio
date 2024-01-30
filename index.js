@@ -2,6 +2,7 @@ const express = require('express');
 const cors = require('cors');
 const path = require('path');
 const routerApp = require('./server/router/index.js');
+
 //const admin = require('./firebase/firebase.config.js');
 
 const app = express();

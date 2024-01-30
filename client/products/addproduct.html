@@ -10,7 +10,7 @@
   <link rel="stylesheet" href="../login/login.css">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
   <style>
-    span{
+    form span{
       font-weight: bold;
       color:cornsilk;
       padding-bottom: 5px;
@@ -22,15 +22,15 @@
   <div class="container-fluid">
     <div class="row justify-content-center align-content-center">
       <!-- LOGO MUEBLES BELLAGIO -->
-      <div class="col-3 barra">
+      <div class="col-2 barra">
         <img src="../img/formLogo.jpg" alt="logo" class="logo">
       </div>
       <!-- TITULO MUEBLES BELLAGIO -->
-      <div class="col-6 barra">
-        <p class="titulo-nav">MUEBLES BELLAGIO - AGREGAR PRODUCTOS</p>
+      <div class="col-8 barra">
+        <p class="titulo-nav">MUEBLES BELLAGIO - AGREGAR PRODUCTOS DISPONIBLES</p>
       </div>
       <!-- ICONO PARA SALIR -->
-      <div class="col-3 text-end barra">
+      <div class="col-2 text-end barra">
         <ul class="navbar-nav mr-auto">
           <li>
             <div class="dropdown">
@@ -57,9 +57,9 @@
         <!-- MENU BARRA LATERAL -->
         <nav class="menu d-flex d-sm-block justify-content-center flex-wrap">
           <a href="../dashboard/index.html"><i class="fas fa-home"></i><span>Inicio</span></a>
-          <a href="../products/index.html"><i class="fas fa-couch"></i><span>Productos Disponibles</span></a>
+          <a href="./index.html"><i class="fas fa-couch"></i><span>Productos Disponibles</span></a>
           <a href="../inventario/index.html"><i class="fas fa-warehouse"></i><span>Inventario</span></a>
-          <a href="../inventario/tablas.html"><i class="fas fa-warehouse"></i><span>Tablas</span></a>
+          <a href="../inventario/tablas.html"><i class="fas fa-table"></i><span>Tablas</span></a>
           <!-- CATOLOGO -->
           <a href="#" class="dropdown-toggle" id="catalogo-Dropdown" role="button" data-bs-toggle="dropdown"
             aria-expanded="false"><i class="fas fa-file-image"></i><span>Catálogo</span></a>
@@ -74,7 +74,7 @@
       <!--------------------------------- CONTENIDO ----------------------->
       <main class="main">
         <div class="">
-          <p class="tituloDisponibles">Agregar Nuevo Producto 🛋️</p>
+          <p class="tituloDisponibles">Agregar Nuevo Producto DISPONIBLE🛋️</p>
           <div class="formContainer formulario2">
             <form class="row g-3 p-5" id="" enctype="multipart/form-data">
               <div class="col-md-6">
@@ -119,7 +119,9 @@
     integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
     crossorigin="anonymous"></script>
   <script src="https://kit.fontawesome.com/646c794df3.js" crossorigin="anonymous"></script>
-  <!-- SCRIPT PERSONALES -->
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <!-- <script src="../swal/sweetAlert.js"></script>  -->
+ <!-- SCRIPT PERSONALES -->
   <script>
     //FUNCION PARA EXTENDER EL SUB-MENU EN EL ICONO DE USUARIO
     document.addEventListener("DOMContentLoaded", function () {
@@ -140,6 +142,12 @@
           catalogoMenu.classList.toggle('show');
         });
     });
+
+    //SWAL
+    Swal.fire({
+      title:"BIENVENIDOS A MUEBLES BELLAGIO"
+    })
+
   </script>
 </body>
 </html>

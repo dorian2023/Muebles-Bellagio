@@ -52,6 +52,7 @@
             <a href="#"><i class="fas fa-home"></i><span>Inicio</span></a>
             <a href="../products/index.html"><i class="fas fa-couch"></i><span>Productos Disponibles</span></a>
             <a href="../inventario/index.html"><i class="fas fa-warehouse"></i><span>Inventario</span></a>
+            <a href="../inventario/tablas.html"><i class="fas fa-table"></i><span>Tablas</span></a>
             <!-- CATOLOGO -->
             <a href="#" class="dropdown-toggle" id="catalogo-Dropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false"><i class="fas fa-file-image"></i><span>Catálogo</span></a>
             <ul class="dropdown-menu" id="catalogo-Menu">
@@ -77,9 +78,23 @@
         </main>
       </div>
   </div>
+  <template id="my-template">
+    <swal-html>
+      <img src="../img/formLogo.jpg" width="70px"  height="70px" alt="logo" class="imgLogo">
+      <h2>Bienvenidos al Inventario de Muebles Bellagio</h2>
+    
+    </swal-html>
+ 
+    
+    
+   
+   
+  </template>
   
   <!-- SCRIPTS -->
+
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
   <script type="module" src="../products/product.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
@@ -93,7 +108,39 @@
   <script src="https://kit.fontawesome.com/646c794df3.js" crossorigin="anonymous"></script>
   <!-- SCRIPT PERSONALES -->
 
+
   <script>
+    //SWAL
+    Swal.fire({
+      template: "#my-template",
+      footer:'Para mas informacion visitanos aqui 👉 <a href="https://www.google.com" target="_blank">Instagram</a>',
+      confirmButtonText: 'Acceder 😊',
+      background: '#000',
+      timer: 5000,
+      timerProgressBar: true,
+      stopKeydownPropagation:false,
+      
+      
+    });
+
+    //  Swal.fire({
+    //   html: '<div class="imgLogo"></div>',
+    //   title: 'BIENVENIDOS A MUEBLES BELLAGIO',
+    //   confirmButtonText: 'Acceder 😊',
+    //   customClass: {
+    //     imgLogo: 'text-center' // Clase CSS para centrar el contenido
+    //   },
+    //   footer:'Para mas informacion visitanos aqui 👉 <a href="https://www.google.com" target="_blank">Instagram</a>',
+    //   width: '90%',
+      
+   
+    // })
+    
+    
+    
+    
+    
+    
     //FUNCION PARA EXTENDER EL SUB-MENU EN EL ICONO DE USUARIO
     document.addEventListener("DOMContentLoaded", function () {
         var dropdownToggle = document.querySelector('.dropdown-toggle');

@@ -1,5 +1,3 @@
-// const { response } = require("express");
-
 const form = document.getElementById('signup');
 const titleProduct = document.getElementById('title');
 const descriptionProduct = document.getElementById('descripcion');
