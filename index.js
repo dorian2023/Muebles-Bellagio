@@ -10,7 +10,7 @@ const session = require('./server/middleware/sessions.js');
 const app = express();
 app.use(cors());
 app.use(express.json());
-app.use(cookieParser)
+app.use(cookieParser());
 
 routerApp(app);
 
@@ -24,7 +24,7 @@ app.use('/', express.static(path.resolve(__dirname, 'client', 'login')));
 app.use('/register', express.static(path.resolve(__dirname, 'client', 'register')));
 app.use('/dashboard/:id', express.static(path.resolve(__dirname, 'client', 'img')), express.static(path.resolve(__dirname, 'client', 'dashboard')));
 app.use('/dashboard/trabajador/:id', express.static(path.resolve(__dirname, 'client', 'img')), express.static(path.resolve(__dirname, 'client', 'dashboard')));
-app.use('/dashboard/trabajador/:id/products', session.authView, express.static(path.resolve(__dirname, 'client', 'products')));
+app.use('/dashboard/trabajador/:id/products', session.auth, express.static(path.resolve(__dirname, 'client', 'products')));
 app.use('/dashboard/trabajador/:id/inventario', express.static(path.resolve(__dirname, 'client', 'inventario')));
 
 app.listen(4000, () => {

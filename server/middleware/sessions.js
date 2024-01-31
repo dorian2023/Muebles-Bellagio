@@ -1,27 +1,26 @@
 exports.auth = (req, res, next) => {
-  const authorization = req.headers.authorization;
-  console.log(authorization);
-  if (!authorization) {
+  const token = req.cookies.token;
+  if (!token) {
     return res.status(401).send({
       'Unauthorized': 'No token provided'
     });
   }
 
-  const token = authorization.split(" ")[1];
+  // const token = authorization.split(" ")[1];
 
   next(token);
 }
 
-exports.authView = (req, res, next) => {
-  const authorization = req.headers.authorization;
+// exports.authView = (req, res, next) => {
+//   const authorization = req.headers.authorization;
 
-  if (!authorization) {
-    return res.status(401).send({
-      'Unauthorized': 'No token provided'
-    });
-  }
+//   if (!authorization) {
+//     return res.status(401).send({
+//       'Unauthorized': 'No token provided'
+//     });
+//   }
 
-  const token = authorization.split(" ")[1];
+//   const token = authorization.split(" ")[1];
 
-  next(token);
-}
+//   next(token);
+// }
