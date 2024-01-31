@@ -6,7 +6,7 @@ const response = require('../../response/index');
 
 router.get('/', (req, res) => {
     const email = req.query.email;
-    if (req.headers.authorization.split(" ")[1] === "undefined") {
+    if (!req.cookies.token) {
         res.json({
             "Unauthorized": "No token provided"
         })
