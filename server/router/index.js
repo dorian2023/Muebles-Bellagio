@@ -11,9 +11,9 @@ const middleware = require('../middleware/sessions.js');
 function routerApp(app) {
     app.use('/api/v1', router);
     router.use('/login', login);
-    router.use('/users', middleware.auth, users);
-    router.use('/products', products);
-    router.use('/inventario', inventario);
+    router.use('/users', users);
+    router.use('/products', middleware.auth, products);
+    router.use('/inventario', middleware.auth, inventario);
 }
 
 module.exports = routerApp;
