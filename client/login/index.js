@@ -35,8 +35,10 @@ signIn.addEventListener('submit', (event) => {
               console.log(objectRole);
 
               if (objectRole.role === "admin") {
+                document.cookie = `token=${token}`;
                 window.location.pathname = `/dashboard/${user.uid}`;
               } else if (objectRole.role === "trabajador") {
+                document.cookie = `token=${token}`;
                 window.location.pathname = `/dashboard/trabajador/${user.uid}`;
               }
             })
