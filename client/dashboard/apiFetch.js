@@ -5,7 +5,7 @@
 // const token = getToken.stsTokenManager.accessToken;
 
 export const getUserFromEmail = async (email) => {
-  const getUserEmail = await fetch(`https://inventario-mb.onrender.com/api/v1/users?email=${email}`);
+  const getUserEmail = await fetch(`http://localhost:4000/api/v1/users?email=${email}`);
   const dataResult = await getUserEmail.json();
   return dataResult;
 

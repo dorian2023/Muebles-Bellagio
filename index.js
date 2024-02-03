@@ -23,9 +23,12 @@ app.use(express.static(path.resolve(__dirname, 'client')));
 app.use('/', express.static(path.resolve(__dirname, 'client', 'login')));
 app.use('/register', express.static(path.resolve(__dirname, 'client', 'register')));
 app.use('/dashboard/:id', express.static(path.resolve(__dirname, 'client', 'img')), express.static(path.resolve(__dirname, 'client', 'dashboard')));
+app.use('/dashboard/admin/:id', express.static(path.resolve(__dirname, 'client', 'img')), express.static(path.resolve(__dirname, 'client', 'dashboard')));
 app.use('/dashboard/trabajador/:id', express.static(path.resolve(__dirname, 'client', 'img')), express.static(path.resolve(__dirname, 'client', 'dashboard')));
-app.use('/dashboard/trabajador/:id/products', session.auth, express.static(path.resolve(__dirname, 'client', 'products')));
-app.use('/dashboard/trabajador/:id/inventario', express.static(path.resolve(__dirname, 'client', 'inventario')));
+app.use('/products/admin/:id', session.auth, express.static(path.resolve(__dirname, 'client', 'products')));
+app.use('/dashboard/trabajador/products/:id', session.auth, express.static(path.resolve(__dirname, 'client', 'products')));
+app.use('/inventario/admin/:id', express.static(path.resolve(__dirname, 'client', 'inventario')));
+app.use('/inventario//:id', express.static(path.resolve(__dirname, 'client', 'inventario')));
 
 app.listen(4000, () => {
     console.log('Servidor arrancando en el puerto 4000');

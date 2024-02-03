@@ -1,10 +1,9 @@
-
 const express = require('express');
 const router = express.Router();
 const controller = require('./controller');
 const response = require('../../response/index');
 
-router.get('/', (req, res) => {
+router.get('/dashboard', (req, res) => {
     console.log(req.query.id)
     if (!req.cookies.token){
       res.json({

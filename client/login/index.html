@@ -52,35 +52,6 @@
       </div>
     </div>
     <!-- SCRIPTS -->
-    <!-- <script>
-      // FUNCION PARA CARGAR EL FORMULARIO
-      document
-        .getElementById("signup")
-        .addEventListener("submit", async function (event) {
-          event.preventDefault();
-          // OBTIENES LOS DATOS DEL FORMULARIO
-          const email = document.getElementById("email").value;
-          const password = document.getElementById("password").value;
-
-          try {
-            const response = await fetch("http://localhost:3100/users", {
-              method: "POST",
-              headers: {
-                "Content-Type": "application/json",
-              },
-              body: JSON.stringify({ email, password }),
-            });
-            if (response.ok) {
-              // REDIRIGE AL USUARIO A LA PAGINA DE DASHBOARD.HTML
-              return (window.location.href = "../dashboard/dashboard.html");
-            } else {
-              console.error("Error de autenticación:", response.statusText);
-            }
-          } catch (error) {
-            console.error("Error de autenticación:", error);
-          }
-        });
-    </script> -->
     <script type="module" src="./apiFetch.js"></script>
     <script type="module" src="./index.js"></script>
   </body>
