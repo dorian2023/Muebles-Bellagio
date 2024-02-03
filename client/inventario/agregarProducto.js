@@ -10,6 +10,7 @@ const transporteProduct = document.getElementById('transporte');
 const feProduct = document.getElementById('fe');
 const fsProduct = document.getElementById('fs');
 const btnAdd = document.getElementById('btnAdd');
+//aaja
 
 
 
