@@ -25,3 +25,4 @@ app.use('/inventario', express.static(path.resolve(__dirname, 'client', 'inventa
 app.listen(4000, ()=> {
     console.log('Servidor arrancando en el puerto 4000');
 })
+//dorian
