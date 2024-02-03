@@ -12,7 +12,7 @@ const fsProduct = document.getElementById('fs');
 const btnAdd = document.getElementById('btnAdd');
 //aaja
 
-
+// asdas
 
 const saveANewProduct = async (product) => {
     const productData = await fetch('https://inventario-mb.onrender.com/api/v1/inventario', {
