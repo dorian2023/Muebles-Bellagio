@@ -14,7 +14,7 @@ const btnAdd = document.getElementById('btnAdd');
 
 
 const saveANewProduct = async (product) => {
-    const productData = await fetch('https://inventario-mb.onrender.com/api/v1/inventario', {
+    const productData = await fetch('http://localhost:4000/api/v1/inventario', {
         method: 'POST',
         headers: { 
             'Content-Type' : 'application/json'

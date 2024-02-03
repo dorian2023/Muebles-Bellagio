@@ -18,7 +18,7 @@ console.log(productID);
 
 //ME OBTIENE EL ID CON EL METODO FECHT
 const getProductByID = async (id) => {
-    const productData = await fetch(`https://inventario-mb.onrender.com/api/v1/inventario?id=${id}`,{
+    const productData = await fetch(`http://localhost:4000/api/v1/inventario?id=${id}`,{
         method: 'GET',
     })
     const resultData = await productData.json();
@@ -26,7 +26,7 @@ const getProductByID = async (id) => {
 }
 
 const updateAProduct = async (idProduct, changeProduct) => {
-    const productData = await fetch(`https://inventario-mb.onrender.com/api/v1/inventario/${idProduct}`,{
+    const productData = await fetch(`http://localhost:4000/api/v1/inventario/${idProduct}`,{
         method: 'PATCH',
         headers:{
             'Content-Type': 'application/json',

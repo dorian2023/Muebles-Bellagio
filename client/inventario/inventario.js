@@ -7,7 +7,7 @@ const btnSearch = document.getElementById('btnSearch');
 
 //AQUI MUESTRA ENESTA RUTA EL OBJETO JSON CON TODOS LOS PRODUCTOS DE LA BASE DE DATOS
 const printProductList = async () =>{
-    const dataList = await fetch('https://inventario-mb.onrender.com/api/v1/inventario', { 
+    const dataList = await fetch('http://localhost:4000/api/v1/inventario', { 
         method: 'GET',
     });
     const dataResult = await dataList.json();
@@ -88,7 +88,7 @@ btnAddProduct.addEventListener('click', () => {
 
 //FUNCION PARA ELIMINAR EL PRODUCTO DESDE EL FRONTEND
 const deleteProduct = async (id) => {
-    const deletedProduct = await fetch(`https://inventario-mb.onrender.com/api/v1/inventario/${id}`,{
+    const deletedProduct = await fetch(`http://localhost:4000/api/v1/inventario/${id}`,{
         method: 'DELETE',
     })
     const deleteSuccess = await deletedProduct.json();
@@ -97,7 +97,7 @@ const deleteProduct = async (id) => {
 
 //FUNCION PARA BOTON BUSCAR
 const getOneProduct = async (titleProduct) => {    
-    const oneProduct = await fetch(`https://inventario-mb.onrender.com/api/v1/inventario?title=${titleProduct}`, {
+    const oneProduct = await fetch(`http://localhost:4000/api/v1/inventario?title=${titleProduct}`, {
         method: 'GET',
     });
 

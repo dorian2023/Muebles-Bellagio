@@ -5,7 +5,7 @@ const btnSearch = document.getElementById('btnSearch');
 
 //FETCH A LA RUTA PARA OBTENER LOS PRODUCTOS
 const printProductList = async () => {
-  const dataList = await fetch('https://inventario-mb.onrender.com/api/v1/products', {
+  const dataList = await fetch('http://localhost:4000/api/v1/products', {
     method: 'GET',
   });
   const dataResult = await dataList.json();
@@ -73,7 +73,7 @@ btnAddProduct.addEventListener('click', () => {
 
 //FUNCION PARA ELIMINAR EL PRODUCTO DESDE EL FRONTEND
 const deleteProduct = async (id) => {
-  const deletedProduct = await fetch(`https://inventario-mb.onrender.com/api/v1/products/${id}`, {
+  const deletedProduct = await fetch(`http://localhost:4000/api/v1/products/${id}`, {
     method: 'DELETE',
   })
   const deleteSuccess = await deletedProduct.json();
@@ -82,7 +82,7 @@ const deleteProduct = async (id) => {
 
 //FUNCION PARA BOTON BUSCAR
 const getOneProduct = async (titleProduct) => {
-  const oneProduct = await fetch(`https://inventario-mb.onrender.com/api/v1/products?title=${titleProduct}`, {
+  const oneProduct = await fetch(`http://localhost:4000/api/v1/products?title=${titleProduct}`, {
     method: 'GET',
   });
   const getProduct = await oneProduct.json();
