@@ -6,6 +6,7 @@ if (span) {
         modal.style.display = "none";
     }
 } 
+// aa
 //register
 window.onclick = function(event) {
   if (event.target == modal) {
