@@ -10,8 +10,7 @@ app.use(cors());
 app.use(express.json());
 
 routerApp(app);
-//nueva rama principal
-// Esto te muestra las rutas de tu proyecto
+
 console.log(path.resolve(__dirname, 'client'));
 
 // rutas visuales (HTML, CSS, img, JAVASCRIPT)
