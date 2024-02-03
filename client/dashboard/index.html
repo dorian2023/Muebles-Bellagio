@@ -1,60 +1,87 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Inventario Dashboard</title>
-  <link rel="stylesheet" href="./dashboard.css">
-  <link rel="stylesheet" href="/login.css">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-</head>
-<body>
-  <!-- ENCABEZADO DE LA PAGINA -->
-  <div class="container-fluid">
-    <div class="row justify-content-center align-content-center">
-      <!-- LOGO MUEBLES BELLAGIO -->
-      <div class="col-3 barra">
-        <img src="../img/formLogo.jpg"  alt="logo" class="logo">
-      </div>
-      <!-- TITULO MUEBLES BELLAGIO -->
-      <div class="col-6 barra">
-        <p class="titulo-nav">MUEBLES BELLAGIO - INVENTARIO</p>
-      </div>
-      <!-- ICONO PARA SALIR -->
-      <div class="col-3 text-end barra">
-        <ul class="navbar-nav mr-auto">
-          <li>
-            <div class="dropdown">
-              <a class="btn dropdown-toggle" href="#" id="navbar-Dropdown" role="button"
-                data-bs-toggle="dropdown" aria-expanded="false" aria-haspopup="true">
-                <i class="fas fa-user-circle"></i>
-              </a>
-              <ul class="dropdown-menu">
-                <li><a class="dropdown-item menuperfil cerrar" href="../login/login.html"><i
-                      class="fas fa-sign-out-alt m-1"></i>Salir</a>
-                </li>
-              </ul>
-            </div>
-          </li>
-        </ul>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Inventario Dashboard</title>
+    <link rel="stylesheet" href="./dashboard.css" />
+    <link rel="stylesheet" href="/login.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <!-- ENCABEZADO DE LA PAGINA -->
+    <div class="container-fluid">
+      <div class="row justify-content-center align-content-center">
+        <!-- LOGO MUEBLES BELLAGIO -->
+        <div class="col-3 barra">
+          <img src="../img/formLogo.jpg" alt="logo" class="logo" />
+        </div>
+        <!-- TITULO MUEBLES BELLAGIO -->
+        <div class="col-6 barra">
+          <p class="titulo-nav">MUEBLES BELLAGIO - INVENTARIO</p>
+        </div>
+        <!-- ICONO PARA SALIR -->
+        <div class="col-3 text-end barra">
+          <ul class="navbar-nav mr-auto">
+            <li>
+              <div class="dropdown">
+                <a
+                  class="btn dropdown-toggle"
+                  href="#"
+                  id="navbar-Dropdown"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                  aria-haspopup="true"
+                >
+                  <i class="fas fa-user-circle"></i>
+                </a>
+                <ul class="dropdown-menu">
+                  <li>
+                    <a class="dropdown-item menuperfil cerrar"
+                      ><i class="fas fa-sign-out-alt m-1"></i>Salir</a
+                    >
+                  </li>
+                </ul>
+              </div>
+            </li>
+          </ul>
+        </div>
       </div>
     </div>
-  </div>
-  <!-- BARRA LATERAL Y GRAFICOS -->
-  <div class="">
+    <!-- BARRA LATERAL Y GRAFICOS -->
+    <div class="">
       <div class="estructura">
         <!-- BARRA LATERAL -->
         <div class="barra-lateral col-12 col-sm-auto">
           <!-- MENU BARRA LATERAL -->
           <nav class="menu d-flex d-sm-block justify-content-center flex-wrap">
             <a href="#"><i class="fas fa-home"></i><span>Inicio</span></a>
-            <a href="../products/index.html"><i class="fas fa-couch"></i><span>Productos Disponibles</span></a>
-            <a href="../inventario/index.html"><i class="fas fa-warehouse"></i><span>Inventario</span></a>
-            <a href="../inventario/tablas.html"><i class="fas fa-table"></i><span>Tablas</span></a>
+            <a href="./products/"
+              ><i class="fas fa-couch"></i><span>Productos Disponibles</span></a
+            >
+            <a href="./inventario/"
+              ><i class="fas fa-warehouse"></i><span>Inventario</span></a
+            >
+            <a href="../inventario/tablas.html"
+              ><i class="fas fa-table"></i><span>Tablas</span></a
+            >
             <!-- CATOLOGO -->
-            <a href="#" class="dropdown-toggle" id="catalogo-Dropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false"><i class="fas fa-file-image"></i><span>Catálogo</span></a>
+            <a
+              href="#"
+              class="dropdown-toggle"
+              id="catalogo-Dropdown"
+              role="button"
+              data-bs-toggle="dropdown"
+              aria-expanded="false"
+              ><i class="fas fa-file-image"></i><span>Catálogo</span></a
+            >
             <ul class="dropdown-menu" id="catalogo-Menu">
               <li><a class="dropdown-item" href="#">JUEGO DE RECIBO</a></li>
               <li><a class="dropdown-item" href="#">COMEDORES</a></li>
@@ -77,174 +104,189 @@
           </div>
         </main>
       </div>
-  </div>
-  <template id="my-template">
-    <swal-html>
-      <img src="../img/formLogo.jpg" width="70px"  height="70px" alt="logo" class="imgLogo">
-      <h2>Bienvenidos al Inventario de Muebles Bellagio</h2>
-    
-    </swal-html>
- 
-    
-    
-   
-   
-  </template>
-  
-  <!-- SCRIPTS -->
+    </div>
+    <template id="my-template">
+      <swal-html>
+        <img
+          src="../img/formLogo.jpg"
+          width="70px"
+          height="70px"
+          alt="logo"
+          class="imgLogo"
+        />
+        <h2>Bienvenidos al Inventario de Muebles Bellagio</h2>
+      </swal-html>
+    </template>
 
-  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-  <script type="module" src="../products/product.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
-    crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
-    integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
-    crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
-    integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
-    crossorigin="anonymous"></script>
-  <script src="https://kit.fontawesome.com/646c794df3.js" crossorigin="anonymous"></script>
-  <!-- SCRIPT PERSONALES -->
+    <!-- SCRIPTS -->
 
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script type="module" src="../products/product.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+      integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
+      integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://kit.fontawesome.com/646c794df3.js"
+      crossorigin="anonymous"
+    ></script>
+    <!-- SCRIPT PERSONALES -->
 
-  <script>
-    //SWAL
-    Swal.fire({
-      template: "#my-template",
-      footer:'Para mas informacion visitanos aqui 👉 <a href="https://www.google.com" target="_blank">Instagram</a>',
-      confirmButtonText: 'Acceder 😊',
-      background: '#000',
-      timer: 5000,
-      timerProgressBar: true,
-      stopKeydownPropagation:false,
-      
-      
-    });
+    <script>
+      //SWAL
+      Swal.fire({
+        template: "#my-template",
+        footer:
+          'Para mas informacion visitanos aqui 👉 <a href="https://www.google.com" target="_blank">Instagram</a>',
+        confirmButtonText: "Acceder 😊",
+        background: "#000",
+        timer: 5000,
+        timerProgressBar: true,
+        stopKeydownPropagation: false,
+      });
 
-    //  Swal.fire({
-    //   html: '<div class="imgLogo"></div>',
-    //   title: 'BIENVENIDOS A MUEBLES BELLAGIO',
-    //   confirmButtonText: 'Acceder 😊',
-    //   customClass: {
-    //     imgLogo: 'text-center' // Clase CSS para centrar el contenido
-    //   },
-    //   footer:'Para mas informacion visitanos aqui 👉 <a href="https://www.google.com" target="_blank">Instagram</a>',
-    //   width: '90%',
-      
-   
-    // })
-    
-    
-    
-    
-    
-    
-    //FUNCION PARA EXTENDER EL SUB-MENU EN EL ICONO DE USUARIO
-    document.addEventListener("DOMContentLoaded", function () {
-        var dropdownToggle = document.querySelector('.dropdown-toggle');
-        var dropdownMenu = document.querySelector('.dropdown-menu');
+      //  Swal.fire({
+      //   html: '<div class="imgLogo"></div>',
+      //   title: 'BIENVENIDOS A MUEBLES BELLAGIO',
+      //   confirmButtonText: 'Acceder 😊',
+      //   customClass: {
+      //     imgLogo: 'text-center' // Clase CSS para centrar el contenido
+      //   },
+      //   footer:'Para mas informacion visitanos aqui 👉 <a href="https://www.google.com" target="_blank">Instagram</a>',
+      //   width: '90%',
 
-        dropdownToggle.addEventListener('click', function () {
-          dropdownMenu.classList.toggle('show');
+      // })
+
+      //FUNCION PARA EXTENDER EL SUB-MENU EN EL ICONO DE USUARIO
+      document.addEventListener("DOMContentLoaded", function () {
+        var dropdownToggle = document.querySelector(".dropdown-toggle");
+        var dropdownMenu = document.querySelector(".dropdown-menu");
+
+        dropdownToggle.addEventListener("click", function () {
+          dropdownMenu.classList.toggle("show");
         });
-    });
+      });
 
-    //FUNCION PARA EXTENDER EL SUB-MENU EN CATALOGO
-    document.addEventListener("DOMContentLoaded", function () {
-        var catalogoToggle = document.getElementById('catalogo-Dropdown');
-        var catalogoMenu = document.getElementById('catalogo-Menu');
+      //FUNCION PARA EXTENDER EL SUB-MENU EN CATALOGO
+      document.addEventListener("DOMContentLoaded", function () {
+        var catalogoToggle = document.getElementById("catalogo-Dropdown");
+        var catalogoMenu = document.getElementById("catalogo-Menu");
 
-        catalogoToggle.addEventListener('click', function () {
-          catalogoMenu.classList.toggle('show');
+        catalogoToggle.addEventListener("click", function () {
+          catalogoMenu.classList.toggle("show");
         });
-    });
+      });
 
-    //GRAFICOS BARRAS
-    const ctx = document.getElementById('myChart');
-    new Chart(ctx, {
-      type: 'bar',
-      data: {
-        labels: ['Mdoulares', 'Sofa', 'Dormitorios', 'Comedores', 'Espejos', 'Colchones', 'Mesa de Centro', 'Mesa TV', 'Poltronas', 'Sofacamas'],
-        datasets: [{
-          label: 'PRODUCTOS VENDIDOS 🛋️',
-          data: [200, 190, 36, 50, 21, 38, 100, 39, 400, 100],
-          backgroundColor: [
-            'rgba(255, 165, 0, 0.5)', // Color para la primera barra
-            'rgba(255, 165, 0, 0.5)', // Color para la segunda barra
-            'rgba(255, 165, 0, 0.5)', // Color para la tercera barra
-            'rgba(255, 165, 0, 0.5)', // Color para la cuarta barra
-            'rgba(255, 165, 0, 0.5)', // Color para la quinta barra
-            'rgba(255, 165, 0, 0.5)', // Color para la sexta barra
-            'rgba(255, 165, 0, 0.5)', // Color para la séptima barra
-            'rgba(255, 165, 0, 0.5)', // Color para la octava barra
-            'rgba(255, 165, 0, 0.5)', // Color para la novena barra
-            'rgba(255, 165, 0, 0.5)', // Color para la décima barra
+      //GRAFICOS BARRAS
+      const ctx = document.getElementById("myChart");
+      new Chart(ctx, {
+        type: "bar",
+        data: {
+          labels: [
+            "Mdoulares",
+            "Sofa",
+            "Dormitorios",
+            "Comedores",
+            "Espejos",
+            "Colchones",
+            "Mesa de Centro",
+            "Mesa TV",
+            "Poltronas",
+            "Sofacamas",
           ],
-          borderWidth: 5,
-          fontColor: 'white'
-        }]
-      },
-      options: {
-        scales: {
-          y: {
-            beginAtZero: true
-          },
-          x: {
-            ticks: {
-              color: 'white' // Cambia el color de los labels a blanco
-            }
-          }
+          datasets: [
+            {
+              label: "PRODUCTOS VENDIDOS 🛋️",
+              data: [200, 190, 36, 50, 21, 38, 100, 39, 400, 100],
+              backgroundColor: [
+                "rgba(255, 165, 0, 0.5)", // Color para la primera barra
+                "rgba(255, 165, 0, 0.5)", // Color para la segunda barra
+                "rgba(255, 165, 0, 0.5)", // Color para la tercera barra
+                "rgba(255, 165, 0, 0.5)", // Color para la cuarta barra
+                "rgba(255, 165, 0, 0.5)", // Color para la quinta barra
+                "rgba(255, 165, 0, 0.5)", // Color para la sexta barra
+                "rgba(255, 165, 0, 0.5)", // Color para la séptima barra
+                "rgba(255, 165, 0, 0.5)", // Color para la octava barra
+                "rgba(255, 165, 0, 0.5)", // Color para la novena barra
+                "rgba(255, 165, 0, 0.5)", // Color para la décima barra
+              ],
+              borderWidth: 5,
+              fontColor: "white",
+            },
+          ],
         },
+        options: {
+          scales: {
+            y: {
+              beginAtZero: true,
+            },
+            x: {
+              ticks: {
+                color: "white", // Cambia el color de los labels a blanco
+              },
+            },
+          },
+        },
+      });
 
-      }
-    });
-
-    //GRAFICO CIRCULAR DE MODULARES
-    const ctx2 = document.getElementById('myChart2');
-    new Chart(ctx2, {
-      type: 'pie',
-      data: {
-        labels: [
-          'Acuario',
-          'Athenas',
-          'Caramelo',
-          'Marbella',
-          'Nicole',
-          'Elegance',
-          'Beatriz',
-          'Leslie',
-          'Dubai',
-          'Florencia',
-          'Marian',
-          'Vancover',
-          'Opera',
-          'Remanso',
-          'Milor',
-          'Marlin',
-          'Zurich',
-          'Piaza',
-          'Dublin',
-          'Venus'
-        ],
-        datasets: [{
-          label: 'MODULARES',
-          data: [10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10],
-          backgroundColor: [
-            'rgb(255, 99, 132)',
-            'rgb(54, 162, 235)',
-            'rgb(255, 205, 86)'
+      //GRAFICO CIRCULAR DE MODULARES
+      const ctx2 = document.getElementById("myChart2");
+      new Chart(ctx2, {
+        type: "pie",
+        data: {
+          labels: [
+            "Acuario",
+            "Athenas",
+            "Caramelo",
+            "Marbella",
+            "Nicole",
+            "Elegance",
+            "Beatriz",
+            "Leslie",
+            "Dubai",
+            "Florencia",
+            "Marian",
+            "Vancover",
+            "Opera",
+            "Remanso",
+            "Milor",
+            "Marlin",
+            "Zurich",
+            "Piaza",
+            "Dublin",
+            "Venus",
           ],
-          hoverOffset: 4
-        }]
-      },
-     
-    });
-
-  </script>
-</body>
-
+          datasets: [
+            {
+              label: "MODULARES",
+              data: [
+                10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10,
+                10, 10, 10, 10,
+              ],
+              backgroundColor: [
+                "rgb(255, 99, 132)",
+                "rgb(54, 162, 235)",
+                "rgb(255, 205, 86)",
+              ],
+              hoverOffset: 4,
+            },
+          ],
+        },
+      });
+    </script>
+  </body>
 </html>
 
 <!-- // {} ||   [] <> -->
